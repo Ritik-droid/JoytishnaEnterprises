@@ -7,12 +7,11 @@ import { ConnectUS } from "@/components/section/ConnectUS";
 export default function Home() {
   return (
     <>
-      <h1>✅ BIOTECH DEPLOYED</h1>;
-      {/* <HeroSection />
+      <HeroSection />
       <BasicInfo />
       <OurFeaturedProducts/>
       <CustomerResponse/>
-      <ConnectUS/> */}
+      <ConnectUS/>
     </>
   );
 }
