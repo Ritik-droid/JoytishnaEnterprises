@@ -18,7 +18,7 @@ import ProductFilterTabs from "@/components/ProductFilterTabs/ProductFilterTabs"
 import ProductCard from "@/components/ProductFilterTabs/ProductCard";
 import { products } from "@/data/products";
 import { features } from "@/data/productFeatures";
-import { productTabledata } from "@/data/productTableData";
+import { productTabledata } from "@/data/producttabledata";
 import { ConnectUS } from "@/components/section/ConnectUS";
 
 export default function Products() {
