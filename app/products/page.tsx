@@ -19,6 +19,7 @@ import ProductCard from "@/components/ProductFilterTabs/ProductCard";
 import { products } from "@/data/products";
 import { features } from "@/data/productFeatures";
 import { productTabledata } from "@/data/productTableData";
+import { ConnectUS } from "@/components/section/ConnectUS";
 
 export default function Products() {
   const [active, setActive] = useState("All Products");
@@ -403,6 +404,7 @@ export default function Products() {
           </Box>
         </Box>
       </Box>
+      <ConnectUS/>
     </Box>
   );
 }
