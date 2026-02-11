@@ -29,7 +29,7 @@ export default function Products() {
   }, [active]);
   return (
     <Box>
-      {/* Hero Section */}
+   
       <Box
         sx={{
           minHeight: "60vh",
@@ -338,7 +338,7 @@ export default function Products() {
               }}
             >
               <img
-                src="featuredProducts/img1.png" 
+                src="featuredProducts/img1.png"
                 alt="Biomass Pellets"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -404,7 +404,7 @@ export default function Products() {
           </Box>
         </Box>
       </Box>
-      <ConnectUS/>
+      <ConnectUS />
     </Box>
   );
 }
