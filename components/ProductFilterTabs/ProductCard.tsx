@@ -3,6 +3,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import { Product } from "@/data/products";
+import Link from "next/link";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -17,7 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
           transform: "translateY(-6px)",
         },
         display: "flex",
-        flexDirection: "column", 
+        flexDirection: "column",
         minHeight: 450,
       }}
     >
@@ -27,7 +28,7 @@ export default function ProductCard({ product }: { product: Product }) {
           position: "relative",
           width: "100%",
           height: 200,
-          mt:1
+          mt: 1,
         }}
       >
         <Image
@@ -44,7 +45,7 @@ export default function ProductCard({ product }: { product: Product }) {
           p: 3,
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start", 
+          alignItems: "flex-start",
           gap: 1.5,
         }}
       >
@@ -69,24 +70,29 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.description}
         </Typography>
 
-        <Button
-          sx={{
-            mt: 2.5,
-            textTransform: "none",
-            fontWeight: 600,
-            color: "#347C5E",
-            border: "1.5px solid #347C5E",
-            borderRadius: "999px",
-            px: 3,
-            py: 1,
-            "&:hover": {
-              backgroundColor: "#347C5E",
-              color: "#FFFFFF",
-            },
-          }}
+        <Link
+          href={`/products/${product.slug}`}
+          style={{ textDecoration: "none" }}
         >
-          Learn More
-        </Button>
+          <Button
+            sx={{
+              mt: 2.5,
+              textTransform: "none",
+              fontWeight: 600,
+              color: "#347C5E",
+              border: "1.5px solid #347C5E",
+              borderRadius: "999px",
+              px: 3,
+              py: 1,
+              "&:hover": {
+                backgroundColor: "#347C5E",
+                color: "#FFFFFF",
+              },
+            }}
+          >
+            Learn More
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
