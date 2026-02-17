@@ -19,9 +19,7 @@ const navLinks = [
   { label: "Products", href: "/products" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
-  { label: "Download Brochure", href: "/downloadBrochure" },
-
-
+  { label: "Download Brochure", href: "/biotech_solution.pdf", newTab: true },
 ];
 
 export default function Navbar() {
@@ -63,8 +61,7 @@ export default function Navbar() {
           sx={{
             minHeight: { xs: 56, sm: 64, md: 80 },
             px: { xs: 2, md: 4 },
-             py: { xs: 0, md:2 }, 
-            
+            py: { xs: 0, md: 2 },
           }}
         >
           <Typography
@@ -83,8 +80,12 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <Button
                   key={link.href}
-                  component={Link}
+                  component={link.newTab ? "a" : Link}
                   href={link.href}
+                  {...(link.newTab && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  })}
                   sx={{ color: "#333333", textTransform: "none" }}
                 >
                   {link.label}
@@ -113,12 +114,15 @@ export default function Navbar() {
           <Typography sx={{ fontSize: 20, fontWeight: 600, mb: 3 }}>
             Biotech Solution
           </Typography>
-
           {navLinks.map((link) => (
             <Button
               key={link.href}
-              component={Link}
+              component={link.newTab ? "a" : Link}
               href={link.href}
+              {...(link.newTab && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               onClick={() => setOpen(false)}
               sx={{
                 display: "block",

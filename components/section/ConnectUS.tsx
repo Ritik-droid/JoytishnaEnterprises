@@ -11,6 +11,7 @@ import {
   LinkedIn,
   Instagram,
 } from "@mui/icons-material";
+import { useState } from "react";
 
 export const ConnectUS = () => {
   const commonTextFieldStyles = {
@@ -22,6 +23,34 @@ export const ConnectUS = () => {
       "&.Mui-focused fieldset": { borderColor: "#E0E0E0" },
       "& input": { padding: "10px 14px" },
     },
+  };
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } else {
+      alert("Failed to send message.");
+    }
   };
 
   return (
@@ -71,16 +100,37 @@ export const ConnectUS = () => {
             </Typography>
 
             <Typography mb={0.5}>Name</Typography>
-            <TextField fullWidth sx={commonTextFieldStyles} />
+            <TextField
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              fullWidth
+              sx={commonTextFieldStyles}
+            />
 
             <Typography mb={0.5}>Email</Typography>
-            <TextField fullWidth sx={commonTextFieldStyles} />
+            <TextField
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              fullWidth
+              sx={commonTextFieldStyles}
+            />
 
             <Typography mb={0.5}>Phone</Typography>
-            <TextField fullWidth sx={commonTextFieldStyles} />
+            <TextField
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              fullWidth
+              sx={commonTextFieldStyles}
+            />
 
             <Typography mb={0.5}>Message</Typography>
             <TextField
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               fullWidth
               multiline
               rows={4}
@@ -89,6 +139,7 @@ export const ConnectUS = () => {
 
             <Button
               variant="contained"
+              onClick={handleSubmit}
               sx={{
                 mt: 1,
                 backgroundColor: "#347C5E",
