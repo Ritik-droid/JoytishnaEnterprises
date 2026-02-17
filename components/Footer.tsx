@@ -127,7 +127,9 @@ const Footer = () => {
             {[
               {
                 icon: <LocationOn sx={{ color: "#FFD700" }} />,
-                text: "Plot No. C-38, New MIDC, Karanja Road, Murtizapur, Dist. Akola – 444107",
+                text: `Plot No. B-33
+                      Murtizapur Growth Center, MIDC, Sherwadi Road,
+                      Murtizapur Dist.-Akola, PinCode - 444107`,
               },
               {
                 icon: <Email sx={{ color: "#FFD700" }} />,
@@ -135,7 +137,7 @@ const Footer = () => {
               },
               {
                 icon: <Phone sx={{ color: "#FFD700" }} />,
-                text: "+91 98765 43210",
+                text: "+91 8668375337",
               },
               {
                 icon: <QrCode sx={{ color: "#FFD700" }} />,
@@ -181,7 +183,7 @@ const Footer = () => {
             opacity: 0.85,
           }}
         >
-          © 2024 Biotech Solution. All rights reserved.
+          © 2026 Biotech Solution. All rights reserved.
         </Typography>
       </Box>
     </Box>

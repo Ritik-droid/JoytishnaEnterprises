@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Typography, Button } from "@mui/material";
+import NextLink from "next/link";
 
 export default function HeroSection() {
   return (
@@ -93,6 +94,8 @@ export default function HeroSection() {
         </Button>
 
         <Button
+          component={NextLink}
+          href="/contact"
           variant="outlined"
           sx={{
             color: "#fff",

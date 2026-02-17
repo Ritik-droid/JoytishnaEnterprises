@@ -32,7 +32,9 @@ export const ConnectUS = () => {
     message: "",
   });
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -170,8 +172,8 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
             <Box sx={{ display: "flex", gap: 1.5, mb: 3 }}>
               <LocationOn sx={{ color: "#347C5E" }} />
               <Typography>
-                Plot No. C-38, New MIDC, Karanja Road, Murtizapur, Dist. Akola –
-                444107
+                Plot No. B-33 Murtizapur Growth Center, MIDC, Sherwadi Road,
+                Murtizapur Dist.-Akola, PinCode - 444107
               </Typography>
             </Box>
 
@@ -182,7 +184,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 
             <Box sx={{ display: "flex", gap: 1.5, mb: 3 }}>
               <Phone sx={{ color: "#347C5E" }} />
-              <Typography>+91 98765 43210</Typography>
+              <Typography>+91 8668375337</Typography>
             </Box>
 
             <Box sx={{ display: "flex", gap: 1.5, mb: 4 }}>
