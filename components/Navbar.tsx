@@ -77,20 +77,36 @@ export default function Navbar() {
 
           {!isMobile && (
             <Box sx={{ display: "flex", gap: 3 }}>
-              {navLinks.map((link) => (
-                <Button
-                  key={link.href}
-                  component={link.newTab ? "a" : Link}
-                  href={link.href}
-                  {...(link.newTab && {
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  })}
-                  sx={{ color: "#333333", textTransform: "none" }}
-                >
-                  {link.label}
-                </Button>
-              ))}
+              {navLinks.map((link) => {
+                const isBrochure = link.label === "Download Brochure";
+
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    target={link.newTab ? "_blank" : "_self"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box
+                      sx={{
+                        px: 2,
+                        py: 1,
+                        fontWeight: isBrochure ? 500 : 400,
+                        borderRadius: isBrochure ? "12px" : 0, 
+                        backgroundColor: isBrochure ? "#FFD700" : "transparent",
+                        color: isBrochure ? "#333333" : "#333",
+                        textDecoration: isBrochure ? "underline" : "none", // ✅ Underline fixed
+                        transition: "0.3s",
+                        "&:hover": {
+                          opacity: 0.85,
+                        },
+                      }}
+                    >
+                      {link.label}
+                    </Box>
+                  </Link>
+                );
+              })}
             </Box>
           )}
 
