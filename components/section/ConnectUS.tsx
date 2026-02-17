@@ -221,7 +221,7 @@ export const ConnectUS = () => {
           >
             <iframe
               title="Company Location"
-              src="https://www.google.com/maps?q=Plot%20No.%20C-38,%20New%20MIDC,%20Karanja%20Road,%20Murtizapur,%20Akola%20444107&t=k&output=embed"
+              src="https://www.google.com/maps?q=Plot%20No.%20B-33,%20Murtizapur%20Growth%20Center,%20MIDC,%20Sherwadi%20Road,%20Murtizapur%20Dist.-Akola,%20PinCode-444107&t=k&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
