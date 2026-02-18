@@ -6,50 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
-
-const cardsData = [
-  {
-    image: "/featuredProducts/img1.png",
-    title: "Sustainable Solutions",
-    description: "Embrace eco-friendly energy options for a greener tomorrow.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "Economical Benefits",
-    description:
-      "Reduce operational costs with efficient, renewable energy sources.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "Efficient Heating",
-    description: "Cost-effective heating equipment built for performance.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "Clean Energy Systems",
-    description: "Innovative biomass solutions for modern industries.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "High Performance",
-    description: "Reliable solutions to meet industrial energy needs.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "High Performance",
-    description: "Reliable solutions to meet industrial energy needs.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "High Performance",
-    description: "Reliable solutions to meet industrial energy needs.",
-  },
-  {
-    image: "/featuredProducts/img1.png",
-    title: "High Performance",
-    description: "Reliable solutions to meet industrial energy needs.",
-  },
-];
+import { products } from "@/data/products";
+import Link from "next/link";
 
 const OurFeaturedProducts = () => {
   const [mounted, setMounted] = useState(false);
@@ -116,13 +74,13 @@ const OurFeaturedProducts = () => {
       </Box>
 
       <Slider {...settings}>
-        {cardsData.map((card, index) => (
+        {products.map((card, index) => (
           <div key={index}>
             <Box
               className="inner-card"
               sx={{
-                width: { xs: "90%", sm: 100, md: 150, lg: 250 },
-                height: { xs: 220, sm: 150, md: 150, lg: 420 },
+                width: { xs: "95%", sm: 100, md: 150, lg: 270 },
+                height: { xs: 250, sm: 150, md: 180, lg: 500 },
                 mx: { xs: 0.5, sm: 1, md: 1.5, lg: 5 },
                 borderRadius: 2,
                 overflow: "hidden",
@@ -188,6 +146,8 @@ const OurFeaturedProducts = () => {
                 </Typography>
 
                 <Button
+                  component={Link}
+                    href={`/products/${card.slug}`}
                   sx={{
                     backgroundColor: "transparent",
                     border: "1.5px solid #347C5E",
