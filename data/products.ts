@@ -8,6 +8,29 @@ export type Product = {
   detailedDescription: string;
 };
 
+export const features = [
+  {
+    title: "High Efficiency 92%+",
+    description: "Advanced combustion technology",
+    image: "/featuredProducts/img6.png",
+  },
+  {
+    title: "Fuel Savings 30-70%",
+    description: "Significant cost reduction",
+    image: "/featuredProducts/img2.png",
+  },
+  {
+    title: "Auto Control",
+    description: "PLC-based intelligent system",
+    image: "/featuredProducts/img3.png",
+  },
+  {
+    title: "Easy Maintenance",
+    description: "Simple ash removal, no complexity",
+    image: "/featuredProducts/img5.png",
+  },
+];
+
 export const products: Product[] = [
   {
     id: 1,
