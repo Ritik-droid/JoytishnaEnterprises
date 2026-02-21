@@ -18,6 +18,7 @@ import ProductClient from "./ProductClient";
 import { ConnectUS } from "@/components/section/ConnectUS";
 import WhyChooeProduct from "./WhyChooseProduct";
 import IndusrtyPerfect from "./IndustryPerfect";
+import CustomersResponses from "./CustomersResponses";
 export default async function ProductPage({
   params,
 }: {
@@ -338,6 +339,7 @@ export default async function ProductPage({
         <ProductClient />
         <WhyChooeProduct/>
         <IndusrtyPerfect/>
+        <CustomersResponses/>
       </Box>
       <ConnectUS/>
     </Box>
