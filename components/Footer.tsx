@@ -185,6 +185,27 @@ const Footer = () => {
         >
           © 2026 Biotech Solution. All rights reserved.
         </Typography>
+        <Typography
+          sx={{
+            mt:3,
+            textAlign: "center",
+            fontSize: 13,
+            color: "#fff",
+            opacity: 0.85,
+          }}
+        >
+          Design and Developed by
+        </Typography>
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontSize: 13,
+            color: "#fff",
+            opacity: 0.85,
+          }}
+        >
+          Prathmesh & Ritik- iritik358@gmail.com [+917397827579]
+        </Typography>
       </Box>
     </Box>
   );

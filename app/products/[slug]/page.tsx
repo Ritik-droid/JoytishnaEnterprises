@@ -317,7 +317,7 @@ export default async function ProductPage({
                   textDecoration: "underline",
                 },
               }}
-        
+            >
               Download Full Spec Sheet
             </Button>
           </Box>
