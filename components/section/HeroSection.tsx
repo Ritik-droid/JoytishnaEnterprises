@@ -13,12 +13,28 @@ export default function HeroSection() {
         justifyContent: "center",
         flexDirection: "column",
         gap: 2,
+        position:"relative",
+        overflow:"hidden",
 
         /* Background image */
-        backgroundImage: "url('/mainBG.svg')",
+        backgroundImage: "url('/fuel_pellet.gif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.8)", 
+          zIndex: 1,
+        },
+
+        /* Make content appear above overlay */
+        "& > *": {
+          position: "relative",
+          zIndex: 2,
+        },
       }}
     >
       <Typography

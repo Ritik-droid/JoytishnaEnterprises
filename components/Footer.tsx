@@ -14,7 +14,7 @@ const Footer = () => {
     },
     {
       icon: InstagramIcon,
-      url: "https://www.instagram.com/yourpage",
+      url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
     },
     {
       icon: YouTube,

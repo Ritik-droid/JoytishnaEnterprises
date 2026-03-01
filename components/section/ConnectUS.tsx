@@ -250,7 +250,7 @@ export const ConnectUS = () => {
               </IconButton>{" "}
               <IconButton
                 component="a"
-                href="https://www.instagram.com/yourpage"
+                href="https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11"
                 target="_blank"
                 rel="noopener noreferrer"
               >
