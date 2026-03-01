@@ -36,14 +36,14 @@ const OurFeaturedProducts = () => {
         breakpoint: 1280,
         settings: {
           slidesToShow: 3.5,
-           infinite: true,
+          infinite: true,
         },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow:4.5,
-           infinite: true,
+          slidesToShow: 4.5,
+          infinite: true,
         },
       },
       {
@@ -70,7 +70,14 @@ const OurFeaturedProducts = () => {
   return (
     <Box sx={{ py: 5, background: "#232323", overflow: "hidden" }}>
       <Box sx={{ textAlign: "center", mb: 4 }}>
-        <Typography variant="h4" fontWeight={700} color="#fff">
+        <Typography
+          variant="h4"
+          fontWeight={700}
+          sx={{
+            color: "#fff",
+            fontFamily: "var(--font-teachers)",
+          }}
+        >
           Our Featured Products
         </Typography>
       </Box>
@@ -128,6 +135,7 @@ const OurFeaturedProducts = () => {
                 <Typography
                   sx={{
                     color: "#347C5E",
+                    fontFamily: "var(--font-teachers)",
                     fontWeight: 600,
                     fontSize: { xs: "8px", sm: "16px", md: "18px" },
                     mb: { xs: 0.5, sm: 1 },
@@ -139,6 +147,7 @@ const OurFeaturedProducts = () => {
                 <Typography
                   sx={{
                     color: "#333333",
+                    fontFamily: "var(--font-jost)",
                     fontSize: { xs: "8px", sm: "13px", md: "14px" },
                     mb: { xs: 1, sm: 1.5, md: 2 },
                     lineHeight: 1.4,
@@ -149,12 +158,14 @@ const OurFeaturedProducts = () => {
 
                 <Button
                   component={Link}
-                    href={`/products/${card.slug}`}
+                  href={`/products/${card.slug}`}
                   sx={{
                     backgroundColor: "transparent",
                     border: "1.5px solid #347C5E",
                     borderRadius: 2.5,
                     color: "#347C5E",
+                    fontFamily: "var(--font-jost)",
+
                     fontSize: { xs: "8px", sm: "12px", md: "13px" },
                     px: { xs: 1, sm: 2 },
                     py: { xs: 0.3, sm: 0.75 },

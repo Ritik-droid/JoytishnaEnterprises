@@ -52,11 +52,28 @@ const Footer = () => {
               textAlign: { xs: "center", md: "left" },
             }}
           >
-            <Typography color="#FFD700" fontSize={22} fontWeight={600} mb={2}>
+            <Typography
+              sx={{
+                color: "#FFD700",
+                fontFamily: "var(--font-teachers)",
+              }}
+              fontSize={22}
+              fontWeight={600}
+              mb={2}
+            >
               Biotech Solution
             </Typography>
 
-            <Typography fontSize={14} lineHeight={1.6} mb={2} maxWidth={320}>
+            <Typography
+              fontSize={14}
+              lineHeight={1.6}
+              mb={2}
+              maxWidth={320}
+              sx={{
+                color: "#33333",
+                fontFamily: "var(--font-jest)",
+              }}
+            >
               Leading the way in renewable energy solutions for a sustainable
               future. Go green, encourage clean.
             </Typography>
@@ -94,7 +111,12 @@ const Footer = () => {
           >
             <Typography
               variant="h6"
-              sx={{ mb: 2, fontWeight: 600, color: "#FFD700" }}
+              sx={{
+                mb: 2,
+                fontWeight: 600,
+                color: "#FFD700",
+                fontFamily: "var(--font-teachers)",
+              }}
             >
               Quick Links
             </Typography>
@@ -112,6 +134,8 @@ const Footer = () => {
                   sx={{
                     color: "#fff",
                     textDecoration: "none",
+                    fontFamily: "var(--font-jost)",
+
                     "&:hover": { color: "#FFD700" },
                   }}
                 >
@@ -134,7 +158,12 @@ const Footer = () => {
           >
             <Typography
               variant="h6"
-              sx={{ mb: 2, fontWeight: 600, color: "#FFD700" }}
+              sx={{
+                mb: 2,
+                fontWeight: 600,
+                color: "#FFD700",
+                fontFamily: "var(--font-teachers)",
+              }}
             >
               Contact Us
             </Typography>
@@ -171,7 +200,13 @@ const Footer = () => {
                 }}
               >
                 {item.icon}
-                <Typography fontSize={14} lineHeight={1.5}>
+                <Typography
+                  fontSize={14}
+                  lineHeight={1.5}
+                  sx={{
+                    fontFamily: "var(--font-jest)",
+                  }}
+                >
                   {item.text}
                 </Typography>
               </Box>

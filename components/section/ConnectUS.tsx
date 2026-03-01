@@ -51,14 +51,14 @@ export const ConnectUS = () => {
     if (data.success) {
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", phone: "", message: "" });
-        window.open(data.whatsappURL, "_blank");
+      window.open(data.whatsappURL, "_blank");
     } else {
       alert("Failed to send message.");
     }
   };
 
   return (
-    <Box sx={{ py: 6, backgroundColor: "#FCF8EC" }}>
+    <Box sx={{ py: 16, backgroundColor: "#FCF8EC" }}>
       {/* CONTENT CONTAINER */}
       <Box
         sx={{
@@ -73,6 +73,7 @@ export const ConnectUS = () => {
               fontSize: "1.6rem",
               fontWeight: 500,
               color: "#333333",
+              fontFamily: "var(--font-teachers)",
             }}
           >
             Connect With Us
@@ -99,7 +100,16 @@ export const ConnectUS = () => {
               boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
             }}
           >
-            <Typography variant="h6" fontWeight={700} mb={3} color="#347C5E">
+            <Typography
+              variant="h6"
+              fontWeight={700}
+              mb={3}
+              
+              sx={{
+                color: "#347C5E",
+                fontFamily: "var(--font-teachers)",
+              }}
+            >
               Send Us A Message
             </Typography>
 
@@ -151,6 +161,7 @@ export const ConnectUS = () => {
                 py: 1.2,
                 borderRadius: 4,
                 textTransform: "none",
+                fontFamily: "var(--font-jost)",
               }}
             >
               Send Message
@@ -167,13 +178,26 @@ export const ConnectUS = () => {
               boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
             }}
           >
-            <Typography variant="h5" fontWeight={700} mb={3} color="#347C5E">
+            <Typography
+              variant="h5"
+              fontWeight={700}
+              mb={3}
+              sx={{
+                color: "#347C5E",
+                fontFamily: "var(--font-teachers)",
+              }}
+            >
               Get In Touch
             </Typography>
 
             <Box sx={{ display: "flex", gap: 1.5, mb: 3 }}>
               <LocationOn sx={{ color: "#347C5E" }} />
-              <Typography>
+              <Typography
+                sx={{
+                  color: "#33333",
+                  fontFamily: "var(--font-teachers)",
+                }}
+              >
                 Plot No. B-33 Murtizapur Growth Center, MIDC, Sherwadi Road,
                 Murtizapur Dist.-Akola, PinCode - 444107
               </Typography>
@@ -181,17 +205,38 @@ export const ConnectUS = () => {
 
             <Box sx={{ display: "flex", gap: 1.5, mb: 3 }}>
               <Email sx={{ color: "#347C5E" }} />
-              <Typography>biotechsolution07.22@gmail.com</Typography>
+              <Typography
+                sx={{
+                  color: "#33333",
+                  fontFamily: "var(--font-teachers)",
+                }}
+              >
+                biotechsolution07.22@gmail.com
+              </Typography>
             </Box>
 
             <Box sx={{ display: "flex", gap: 1.5, mb: 3 }}>
               <Phone sx={{ color: "#347C5E" }} />
-              <Typography>+91 8668375337</Typography>
+              <Typography
+                sx={{
+                  color: "#33333",
+                  fontFamily: "var(--font-teachers)",
+                }}
+              >
+                +91 8668375337
+              </Typography>
             </Box>
 
             <Box sx={{ display: "flex", gap: 1.5, mb: 4 }}>
               <QrCode sx={{ color: "#347C5E" }} />
-              <Typography>GSTIN: 27ANWPR0738F1ZI</Typography>
+              <Typography
+                sx={{
+                  color: "#33333",
+                  fontFamily: "var(--font-teachers)",
+                }}
+              >
+                GSTIN: 27ANWPR0738F1ZI
+              </Typography>
             </Box>
 
             <Box sx={{ display: "flex", gap: 0 }}>

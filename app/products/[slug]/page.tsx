@@ -36,12 +36,14 @@ export default async function ProductPage({
         sx={{
           minHeight: "100vh",
           px: { xs: 3, md: 10 },
-          py: { xs: 10, md: 14 },
+          py: { xs: 15, md: 18 },
           backgroundColor: "#EDE0C2",
         }}
       >
         <Link href="/products">
-          <Button sx={{ mb: 4 }}>← Back to Products</Button>
+          <Button sx={{ mb: 4, color: "#1E1E1E" }}>
+            ← Back to Products
+          </Button>{" "}
         </Link>
         {/* Main Layout */}
         <Box
@@ -301,25 +303,7 @@ export default async function ProductPage({
               </Box>
             </Box>
 
-            {/* Bottom Button */}
-            <Button
-              startIcon={<PictureAsPdfIcon />}
-              sx={{
-                mt: 4,
-                alignSelf: "flex-start",
-                backgroundColor: "transparent",
-                color: "#347C5E",
-                textTransform: "none",
-                fontWeight: 600,
-                px: 0,
-                "&:hover": {
-                  backgroundColor: "transparent",
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              Download Full Spec Sheet
-            </Button>
+
           </Box>
         </Box>
       </Box>

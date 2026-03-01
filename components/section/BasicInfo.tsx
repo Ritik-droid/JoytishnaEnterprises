@@ -59,21 +59,32 @@ export default function BasicInfo() {
           >
             {/* Image */}
             <Box sx={{ mb: 2 }}>
-               <Image
-        src={card.image}
-        alt={card.title}
-        width={index === 1 ? 33 : 60}   
-        height={index === 1 ? 33 : 60} 
-      />
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={index === 1 ? 33 : 60}
+                height={index === 1 ? 33 : 60}
+              />
             </Box>
 
             {/* Title */}
-            <Typography variant="h6" fontWeight={600} mb={1} color="#347C5E">
+            <Typography
+              variant="h6"
+              fontWeight={600}
+              mb={1}
+              sx={{
+                color: "#347C5E",
+                fontFamily: "var(--font-teachers)",
+              }}
+            >
               {card.title}
             </Typography>
 
             {/* Description */}
-            <Typography color="#333333" fontSize={14}>
+            <Typography     sx={{
+                color: "#333333",
+                fontFamily: "var(--font-jost)",
+              }} fontSize={14}>
               {card.description}
             </Typography>
           </Box>

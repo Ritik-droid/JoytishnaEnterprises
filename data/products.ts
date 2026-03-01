@@ -45,7 +45,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    title: "Pellet Fire Burners",
+    title: "Vertical Pellet Fire Burners",
     slug: "pellet-fire-burners",
     category: "Burners",
     image: "/products/product2.png",
@@ -133,7 +133,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    title: "Dryers",
+    title: "Dryers/Dal-Mill Dryers",
     slug: "industrial-dryers",
     category: "Specialized",
     image: "/products/product10.png",

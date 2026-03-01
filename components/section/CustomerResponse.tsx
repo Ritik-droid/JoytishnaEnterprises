@@ -68,7 +68,15 @@ export const CustomerResponse = () => {
           px: 2,
         }}
       >
-        <Typography variant="h4" fontWeight={700} color="#FFD700" mb={3}>
+        <Typography
+          variant="h4"
+          fontWeight={700}
+          sx={{
+            color: "#FFD700",
+            fontFamily: "var(--font-teachers)",
+          }}
+          mb={3}
+        >
           What Our Customers Say
         </Typography>
 
@@ -94,6 +102,8 @@ export const CustomerResponse = () => {
                   maxWidth: "800px",
                   margin: "0 auto",
                   color: "#FFFFFF",
+                  fontFamily: "var(--font-jost)",
+
                   fontSize: { xs: "13.5px", sm: "16px", md: "22px" },
                   fontStyle: "italic",
                   lineHeight: 1.6,
@@ -106,6 +116,8 @@ export const CustomerResponse = () => {
                 sx={{
                   mt: 4,
                   color: "#FFFFFF",
+                  fontFamily: "var(--font-jost)",
+
                   fontSize: { xs: "12px", sm: "16px", md: "18px" },
                 }}
               >

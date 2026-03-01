@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -64,19 +65,28 @@ export default function Navbar() {
             py: { xs: 0, md: 2 },
           }}
         >
+          <Image
+            src="/Biotech_Solution.png" // put your logo inside public folder
+            alt="Biotech Solution Logo"
+            width={40}
+            height={40}
+            style={{ objectFit: "contain" }}
+          />
           <Typography
             sx={{
+              px:2,
               flexGrow: 1,
               fontSize: { xs: 20, md: 20 },
               fontWeight: 600,
               color: "#333333",
+              fontFamily: "var(--font-teachers)"
             }}
           >
             Biotech Solution
           </Typography>
 
           {!isMobile && (
-            <Box sx={{ display: "flex", gap: 3 }}>
+            <Box sx={{ display: "flex", gap: 3,fontFamily: "var(--font-jost)" }}>
               {navLinks.map((link) => {
                 const isBrochure = link.label === "Download Brochure";
 
@@ -92,7 +102,7 @@ export default function Navbar() {
                         px: 2,
                         py: 1,
                         fontWeight: isBrochure ? 500 : 400,
-                        borderRadius: isBrochure ? "12px" : 0, 
+                        borderRadius: isBrochure ? "12px" : 0,
                         backgroundColor: isBrochure ? "#FFD700" : "transparent",
                         color: isBrochure ? "#333333" : "#333",
                         textDecoration: isBrochure ? "underline" : "none", // ✅ Underline fixed

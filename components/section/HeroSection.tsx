@@ -29,6 +29,7 @@ export default function HeroSection() {
           color: "#fff",
           textAlign: "center",
           lineHeight: 1.2,
+          fontFamily: "var(--font-teachers)",
         }}
       >
         Biotech Solution
@@ -40,6 +41,7 @@ export default function HeroSection() {
           color: "rgba(255,255,255,0.85)",
           textAlign: "center",
           lineHeight: 1.4,
+          fontFamily: "var(--font-jost)",
         }}
       >
         Go Green, Encourage Clean.
@@ -51,6 +53,7 @@ export default function HeroSection() {
           color: "rgba(255,255,255,0.75)",
           textAlign: "center",
           maxWidth: 720,
+          fontFamily: "var(--font-jost)",
           lineHeight: 1.6,
         }}
       >
@@ -91,6 +94,7 @@ export default function HeroSection() {
             py: 1.2,
             textTransform: "none",
             fontWeight: 500,
+            fontFamily: "var(--font-jost)",
             "&:hover": {
               backgroundColor: "#2e6f54",
             },
@@ -109,6 +113,8 @@ export default function HeroSection() {
             borderRadius: "10px",
             px: 3,
             py: 1.2,
+            fontFamily: "var(--font-jost)",
+
             "&:hover": {
               borderColor: "#fff",
               backgroundColor: "rgba(255,255,255,0.1)",
