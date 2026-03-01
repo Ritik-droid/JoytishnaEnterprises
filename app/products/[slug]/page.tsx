@@ -36,7 +36,7 @@ export default async function ProductPage({
         sx={{
           minHeight: "100vh",
           px: { xs: 3, md: 10 },
-          py: 8,
+          py: { xs: 10, md: 14 },
           backgroundColor: "#EDE0C2",
         }}
       >
@@ -337,11 +337,11 @@ export default async function ProductPage({
         }}
       >
         <ProductClient />
-        <WhyChooeProduct/>
-        <IndusrtyPerfect/>
-        <CustomersResponses/>
+        <WhyChooeProduct />
+        <IndusrtyPerfect />
+        <CustomersResponses />
       </Box>
-      <ConnectUS/>
+      <ConnectUS />
     </Box>
   );
 }

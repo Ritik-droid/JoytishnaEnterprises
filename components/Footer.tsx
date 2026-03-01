@@ -2,12 +2,25 @@
 
 import { Box, Typography, IconButton, Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTube from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { LocationOn, Email, Phone, QrCode } from "@mui/icons-material";
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      icon: FacebookIcon,
+      url: "https://www.facebook.com/yourpage",
+    },
+    {
+      icon: InstagramIcon,
+      url: "https://www.instagram.com/yourpage",
+    },
+    {
+      icon: YouTube,
+      url: "https://youtube.com/@biotechsolution-f4g?si=DB_35x0g4tv14qbZ",
+    },
+  ];
   return (
     <Box
       sx={{
@@ -49,20 +62,22 @@ const Footer = () => {
             </Typography>
 
             <Box sx={{ display: "flex", gap: 1 }}>
-              {[FacebookIcon, TwitterIcon, LinkedInIcon, InstagramIcon].map(
-                (Icon, i) => (
-                  <IconButton
-                    key={i}
-                    sx={{
-                      color: "#fff",
-                      p: 0,
-                      "&:hover": { color: "#FFD700" },
-                    }}
-                  >
-                    <Icon />
-                  </IconButton>
-                ),
-              )}
+              {socialLinks.map(({ icon: Icon, url }, i) => (
+                <IconButton
+                  key={i}
+                  component="a"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "#fff",
+                    p: 0,
+                    "&:hover": { color: "#FFD700" },
+                  }}
+                >
+                  <Icon />
+                </IconButton>
+              ))}
             </Box>
           </Box>
 
@@ -187,7 +202,7 @@ const Footer = () => {
         </Typography>
         <Typography
           sx={{
-            mt:3,
+            mt: 3,
             textAlign: "center",
             fontSize: 13,
             color: "#fff",

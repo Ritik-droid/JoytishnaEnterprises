@@ -1,6 +1,6 @@
 "use client";
-
-import { Box, Typography, TextField, Button } from "@mui/material";
+import Link from "next/link";
+import { Box, Typography, TextField, Button, IconButton } from "@mui/material";
 import {
   LocationOn,
   Email,
@@ -9,6 +9,7 @@ import {
   FacebookTwoTone,
   Twitter,
   LinkedIn,
+  YouTube,
   Instagram,
 } from "@mui/icons-material";
 import { useState } from "react";
@@ -50,6 +51,7 @@ export const ConnectUS = () => {
     if (data.success) {
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", phone: "", message: "" });
+        window.open(data.whatsappURL, "_blank");
     } else {
       alert("Failed to send message.");
     }
@@ -192,11 +194,31 @@ export const ConnectUS = () => {
               <Typography>GSTIN: 27ANWPR0738F1ZI</Typography>
             </Box>
 
-            <Box sx={{ display: "flex", gap: 2 }}>
-              <FacebookTwoTone sx={{ color: "#347C5E" }} />
-              <Twitter sx={{ color: "#347C5E" }} />
-              <LinkedIn sx={{ color: "#347C5E" }} />
-              <Instagram sx={{ color: "#347C5E" }} />
+            <Box sx={{ display: "flex", gap: 0 }}>
+              <IconButton
+                component="a"
+                href="https://www.facebook.com/yourpage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookTwoTone sx={{ color: "#347C5E" }} />
+              </IconButton>{" "}
+              <IconButton
+                component="a"
+                href="https://www.instagram.com/yourpage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram sx={{ color: "#347C5E" }} />
+              </IconButton>{" "}
+              <IconButton
+                component="a"
+                href="https://youtube.com/@biotechsolution-f4g?si=DB_35x0g4tv14qbZ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <YouTube sx={{ color: "#347C5E" }} />
+              </IconButton>
             </Box>
           </Box>
         </Box>

@@ -35,22 +35,24 @@ const OurFeaturedProducts = () => {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 3.5,
+           infinite: true,
         },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 2,
+          slidesToShow:4.5,
+           infinite: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 4.5,
           slidesToScroll: 1,
-          centerMode: false,
-          infinite: false, // 👈 VERY IMPORTANT
+          centerMode: true,
+          infinite: true,
         },
       },
     ],
@@ -79,8 +81,8 @@ const OurFeaturedProducts = () => {
             <Box
               className="inner-card"
               sx={{
-                width: { xs: "95%", sm: 100, md: 150, lg: 270 },
-                height: { xs: 250, sm: 150, md: 180, lg: 500 },
+                width: { xs: "95%", sm: 180, md: 250, lg: 290 },
+                height: { xs: 250, sm: 440, md: 500, lg: 500 },
                 mx: { xs: 0.5, sm: 1, md: 1.5, lg: 5 },
                 borderRadius: 2,
                 overflow: "hidden",
