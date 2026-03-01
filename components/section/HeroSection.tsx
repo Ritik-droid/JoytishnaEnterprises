@@ -2,7 +2,7 @@
 
 import { Box, Typography, Button } from "@mui/material";
 import NextLink from "next/link";
-
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 export default function HeroSection() {
   return (
     <Box
@@ -15,7 +15,7 @@ export default function HeroSection() {
         gap: 2,
 
         /* Background image */
-        backgroundImage: "url('/mainBG.png')",
+        backgroundImage: "url('/mainBG.svg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -79,18 +79,24 @@ export default function HeroSection() {
         }}
       >
         <Button
+          href="https://wa.me/8668375337"
+          target="_blank"
+          rel="noopener noreferrer"
+          startIcon={<WhatsAppIcon />}
           sx={{
             backgroundColor: "#347C5E",
             borderRadius: "10px",
             color: "#fff",
             px: 3,
             py: 1.2,
+            textTransform: "none",
+            fontWeight: 500,
             "&:hover": {
               backgroundColor: "#2e6f54",
             },
           }}
         >
-          Explore Our Solutions
+          Chat on WhatsApp
         </Button>
 
         <Button

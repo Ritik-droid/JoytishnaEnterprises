@@ -46,7 +46,7 @@ export default function Navbar() {
           left: 0,
           right: 0,
           mx: "auto",
-          backgroundColor: "#FFFFFF33",
+          backgroundColor: "#ffffffb8",
           backdropFilter: "blur(5px)",
           borderRadius: "30px",
           width: {
@@ -69,7 +69,7 @@ export default function Navbar() {
               flexGrow: 1,
               fontSize: { xs: 20, md: 20 },
               fontWeight: 600,
-              color: "#FFFFFF",
+              color: "#333333",
             }}
           >
             Biotech Solution
