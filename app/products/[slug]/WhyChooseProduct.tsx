@@ -72,7 +72,7 @@ export default function WhyChooeProduct({ product }: any) {
           textAlign: "center",
         }}
       >
-        Why Choose Our Biomass Pellet Burner?
+        Why Choose Our {product?.title}?
       </Typography>
 
       {/* Proper 3x3 Grid */}
@@ -82,7 +82,7 @@ export default function WhyChooeProduct({ product }: any) {
         sx={{
           display: "grid",
           gridTemplateColumns: {
-            xs: "1fr", 
+            xs: "1fr",
             md: "repeat(3, 1fr)",
           },
           gap: 4,

@@ -1,8 +1,7 @@
-import { products, features } from "@/data/products";
+import { products, features, heroData } from "@/data/products";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import {
   Box,
   Typography,
@@ -27,6 +26,7 @@ export default async function ProductPage({
   const { slug } = await params;
 
   const product = products.find((p) => p.slug === slug);
+  const hero = heroData.find((item) => item.slug === slug);
 
   if (!product) return notFound();
 
@@ -110,7 +110,7 @@ export default async function ProductPage({
                   color: "#333",
                 }}
               >
-                1,00,000 - 70,00,000 Kcal/hr
+              {product.capacity}
               </Typography>
             </Box>
 
@@ -211,7 +211,7 @@ export default async function ProductPage({
                 mb: 2,
               }}
             >
-              Advanced Biomass Heating Technology
+              {hero?.heroTitle}
             </Typography>
 
             <Typography
@@ -221,14 +221,7 @@ export default async function ProductPage({
                 color: "#555555",
               }}
             >
-              Our biomass pellet burner systems are engineered to deliver high
-              efficiency, consistent thermal output, and environmentally
-              responsible performance. Designed with modern automation and
-              industrial-grade components, these systems ensure low operational
-              costs, minimal emissions, and seamless integration into various
-              industrial applications. Built for durability and optimized fuel
-              combustion, they provide reliable heat generation across diverse
-              capacity requirements.
+              {hero?.heroDescription}
             </Typography>
           </Box>
 
@@ -245,7 +238,6 @@ export default async function ProductPage({
               justifyContent: "space-between",
             }}
           >
-            {/* Top Section */}
             <Box>
               <Typography
                 sx={{
@@ -257,18 +249,9 @@ export default async function ProductPage({
               >
                 Quick Specification
               </Typography>
+
               <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                {[
-                  { label: "Fuel Type", value: "Biomass Pellets" },
-                  {
-                    label: "Capacity Range",
-                    value: "1,00,000 – 70,00,000 Kcal/hr",
-                  },
-                  { label: "Efficiency", value: "92%+" },
-                  { label: "Control System", value: "PLC Automated" },
-                  { label: "Ignition", value: "Auto Ignition" },
-                  { label: "Warranty", value: "2 Years" },
-                ].map((spec, index) => (
+                {hero?.specifications?.map((spec, index) => (
                   <Box
                     key={index}
                     sx={{
@@ -302,8 +285,6 @@ export default async function ProductPage({
                 ))}
               </Box>
             </Box>
-
-
           </Box>
         </Box>
       </Box>
@@ -321,8 +302,8 @@ export default async function ProductPage({
         }}
       >
         <ProductClient />
-        <WhyChooeProduct />
-        <IndusrtyPerfect />
+        <WhyChooeProduct product={product} />
+         <IndusrtyPerfect />
         <CustomersResponses />
       </Box>
       <ConnectUS />
