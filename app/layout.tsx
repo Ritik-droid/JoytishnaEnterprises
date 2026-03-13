@@ -17,8 +17,8 @@ const jost = Jost({
 export { teachers, jost };
 
 export const metadata = {
-  title: "BioTech",
-  description: "BioTech Client Website",
+  title: "Jyotishna Enterprises",
+  description: "Jyotishna Enterprises",
 };
 
 export default function RootLayout({

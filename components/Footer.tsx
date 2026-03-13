@@ -1,10 +1,13 @@
 "use client";
 
-import { Box, Typography, IconButton, Link } from "@mui/material";
+import { Box, Typography, IconButton, Link, Button } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTube from "@mui/icons-material/YouTube";
+import Twitter from "@mui/icons-material/X";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { LocationOn, Email, Phone, QrCode } from "@mui/icons-material";
+import Image from "next/image";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const Footer = () => {
   const socialLinks = [
@@ -13,6 +16,10 @@ const Footer = () => {
       url: "https://www.facebook.com/yourpage",
     },
     {
+      icon: Twitter,
+      url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
+    },
+        {
       icon: InstagramIcon,
       url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
     },
@@ -24,7 +31,7 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        background: "#5C4B5C",
+        background: "#0F0F0F",
         py: { xs: 6, md: 10 },
         px: { xs: 2, sm: 4, md: 20 },
         display: "flex",
@@ -52,33 +59,16 @@ const Footer = () => {
               textAlign: { xs: "center", md: "left" },
             }}
           >
-            <Typography
-              sx={{
-                color: "#FFD700",
-                fontFamily: "var(--font-teachers)",
-              }}
-              fontSize={22}
-              fontWeight={600}
-              mb={2}
-            >
-              Biotech Solution
-            </Typography>
+            <Image
+              src="/logo.png"
+              alt="jyotishnaLogo"
+              width={120}
+              height={100}
+              style={{ objectFit: "contain" }}
+            />
 
-            <Typography
-              fontSize={14}
-              lineHeight={1.6}
-              mb={2}
-              maxWidth={320}
-              sx={{
-                color: "#33333",
-                fontFamily: "var(--font-jest)",
-              }}
-            >
-              Leading the way in renewable energy solutions for a sustainable
-              future. Go green, encourage clean.
-            </Typography>
 
-            <Box sx={{ display: "flex", gap: 1 }}>
+            <Box sx={{ display: "flex", gap: 1, mt: 2 }}>
               {socialLinks.map(({ icon: Icon, url }, i) => (
                 <IconButton
                   key={i}
@@ -96,6 +86,19 @@ const Footer = () => {
                 </IconButton>
               ))}
             </Box>
+            <Typography
+              mt={2}
+              fontSize={14}
+              lineHeight={1.6}
+              mb={2}
+              maxWidth={320}
+              sx={{
+                color: "#33333",
+                fontFamily: "var(--font-jest)",
+              }}
+            >
+              Gate No. 1430, Chinchecha Mala, Mhatre Industries, Chikhali, Pune – 411062
+            </Typography>
           </Box>
 
           {/* Column 2 */}
@@ -109,23 +112,13 @@ const Footer = () => {
               textAlign: "center",
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                mb: 2,
-                fontWeight: 600,
-                color: "#FFD700",
-                fontFamily: "var(--font-teachers)",
-              }}
-            >
-              Quick Links
-            </Typography>
+
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
               {[
                 { label: "Home", href: "/" },
-                { label: "About Us", href: "/about" },
-                { label: "Products", href: "/products" },
+                { label: "About Us", href: "#about" },
+                { label: "Products", href: "#products" },
                 { label: "Contact", href: "/contact" },
               ].map((item) => (
                 <Link
@@ -161,32 +154,25 @@ const Footer = () => {
               sx={{
                 mb: 2,
                 fontWeight: 600,
-                color: "#FFD700",
+                color: "#FFFFFF",
                 fontFamily: "var(--font-teachers)",
               }}
             >
-              Contact Us
+              Contact
             </Typography>
 
             {[
               {
-                icon: <LocationOn sx={{ color: "#FFD700" }} />,
-                text: `Plot No. B-33
-                      Murtizapur Growth Center, MIDC, Sherwadi Road,
-                      Murtizapur Dist.-Akola, PinCode - 444107`,
+
+                text: `Family Industries`,
               },
               {
-                icon: <Email sx={{ color: "#FFD700" }} />,
-                text: "biotechsolution07.22@gmail.com",
+                text: "sales@jyotishnaenterprises.com",
               },
               {
-                icon: <Phone sx={{ color: "#FFD700" }} />,
                 text: "+91 8668375337",
               },
-              {
-                icon: <QrCode sx={{ color: "#FFD700" }} />,
-                text: "GSTIN: 27ANWPR0738F1ZI",
-              },
+
             ].map((item, i) => (
               <Box
                 key={i}
@@ -199,7 +185,6 @@ const Footer = () => {
                   justifyContent: { xs: "center", md: "flex-start" },
                 }}
               >
-                {item.icon}
                 <Typography
                   fontSize={14}
                   lineHeight={1.5}
@@ -212,6 +197,56 @@ const Footer = () => {
               </Box>
             ))}
           </Box>
+       
+               <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+
+                          <Button
+            variant="contained"
+            endIcon={<ArrowOutwardIcon />}
+            sx={{
+              background: "#A9FF5C",
+              minWidth: 180,
+              height: 48,
+              borderRadius: "15px",
+              color: "#0F0F0F",
+              textTransform: "none",
+              fontFamily: "Jost",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": { background: "#1ebe5d" },
+            }}
+            href="https://wa.me/7498541851"
+            target="_blank"
+          >
+            WhatsApp Chat
+          </Button>
+
+          <Button
+            variant="outlined"
+            component={Link}
+            href="/products"
+            sx={{
+              minWidth: 180,
+              height: 48,
+              borderRadius: "15px",
+              borderColor: "#ffffff",
+              background: "#FFFFFF",
+              color: "#0F0F0F",
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": {
+                borderColor: "#ffffff",
+              },
+            }}
+          >
+            View Products
+          </Button>
+               </Box>
+       
+       
         </Box>
 
         {/* Divider */}
@@ -233,7 +268,7 @@ const Footer = () => {
             opacity: 0.85,
           }}
         >
-          © 2026 Biotech Solution. All rights reserved.
+          © 2026 Jyotishna Enterprises. All rights reserved.
         </Typography>
         <Typography
           sx={{

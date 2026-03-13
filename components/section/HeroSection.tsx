@@ -1,8 +1,7 @@
 "use client";
 
-import { Box, Typography, Button } from "@mui/material";
-import NextLink from "next/link";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Box, Typography, Button, Stack, Link } from "@mui/material";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 export default function HeroSection() {
   return (
     <Box
@@ -11,135 +10,212 @@ export default function HeroSection() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
+        flexDirection: { xs: "column", md: "row" },
+        background: "#0F0F0F",
         gap: 2,
-        position:"relative",
-        overflow:"hidden",
-
-        /* Background image */
-        backgroundImage: "url('/fuel_pellet.gif')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          inset: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.8)", 
-          zIndex: 1,
-        },
-
-        /* Make content appear above overlay */
-        "& > *": {
-          position: "relative",
-          zIndex: 2,
-        },
+        px: 8,
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      <Typography
-        sx={{
-          fontSize: { xs: 42, sm: 42, md: 56, lg: 64 },
-          mt: { xs: 2, sm: 42, md: 6, lg: 4 },
-          fontWeight: 600,
-          color: "#fff",
-          textAlign: "center",
-          lineHeight: 1.2,
-          fontFamily: "var(--font-teachers)",
-        }}
-      >
-        Biotech Solution
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: { xs: 18, sm: 22, md: 28 },
-          color: "rgba(255,255,255,0.85)",
-          textAlign: "center",
-          lineHeight: 1.4,
-          fontFamily: "var(--font-jost)",
-        }}
-      >
-        Go Green, Encourage Clean.
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: { xs: 14, sm: 16, md: 18 },
-          color: "rgba(255,255,255,0.75)",
-          textAlign: "center",
-          maxWidth: 720,
-          fontFamily: "var(--font-jost)",
-          lineHeight: 1.6,
-        }}
-      >
-        Leading manufacturer of biomass pellet fire burners, heating equipment,
-        and pellets supplier.
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: { xs: 13, sm: 14, md: 16 },
-          color: "rgba(255,255,255,0.7)",
-          fontStyle: "italic",
-          textAlign: "center",
-        }}
-      >
-        “Save Money. Use Green Energy. Go Green.”
-      </Typography>
-
       <Box
         sx={{
           display: "flex",
-          gap: 2,
-          mt: 3,
-          flexWrap: "wrap", // 👈 mobile safe
-          justifyContent: "center",
+          flex: 1,
+          flexDirection: "column",
+          alignItems: { xs: "center", md: "flex-start" },
+          textAlign: { xs: "center", md: "left" },
+          py: { xs: 15, md: 10 },
+          px: 2,
+          maxWidth: 1100,
+          width: "100%",
+          mx: "auto",
         }}
       >
-        <Button
-          href="https://wa.me/8668375337"
-          target="_blank"
-          rel="noopener noreferrer"
-          startIcon={<WhatsAppIcon />}
+        <Typography
           sx={{
-            backgroundColor: "#347C5E",
-            borderRadius: "10px",
-            color: "#fff",
-            px: 3,
-            py: 1.2,
-            textTransform: "none",
-            fontWeight: 500,
-            fontFamily: "var(--font-jost)",
-            "&:hover": {
-              backgroundColor: "#2e6f54",
-            },
+            fontFamily: "Teachers, sans-serif",
+            fontWeight: 900,
+            fontSize: { xs: "48px", md: "105px" },
+            lineHeight: { xs: "60px", md: "126px" },
+            letterSpacing: "3.5px",
+            backgroundImage: "url('/animation.gif')",
+            backgroundSize: "cover",
+            backgroundRepeat: "repeat",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
-          Chat on WhatsApp
-        </Button>
-
-        <Button
-          component={NextLink}
-          href="/contact"
-          variant="outlined"
+          Jyotishna Enterprises
+        </Typography>
+        {/* Description */}
+        <Typography
           sx={{
-            color: "#fff",
-            borderColor: "#fff",
-            borderRadius: "10px",
-            px: 3,
-            py: 1.2,
-            fontFamily: "var(--font-jost)",
-
-            "&:hover": {
-              borderColor: "#fff",
-              backgroundColor: "rgba(255,255,255,0.1)",
-            },
+            mt: 4,
+            maxWidth: 750,
+            fontSize: { xs: "16px", md: "18px" },
+            lineHeight: 1.8,
+            color: "#e0e0e0",
+            fontFamily: "Jost",
           }}
         >
-          Connect With Us
-        </Button>
+          We are pleased to introduce Jyotishna, a prominent Pune-based importer
+          and stockiest established in 2026. We specialize in the supply of ASTM
+          A193 Gr. B7 and A194 Gr. 2H fasteners, committed to providing
+          industry-leading standards and service.
+        </Typography>
+
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={3}
+          mt={5}
+          alignItems="center"
+        >
+          <Button
+            variant="contained"
+            endIcon={<ArrowOutwardIcon />}
+            sx={{
+              background: "#A9FF5C",
+              minWidth: 180,
+              height: 48,
+              borderRadius: "15px",
+              color: "#0F0F0F",
+              textTransform: "none",
+              fontFamily: "Jost",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": { background: "#1ebe5d" },
+            }}
+            href="https://wa.me/919999999999"
+            target="_blank"
+          >
+            WhatsApp Chat
+          </Button>
+
+          <Button
+            variant="outlined"
+            component={Link}
+            href="/products"
+            sx={{
+              minWidth: 180,
+              height: 48,
+              borderRadius: "15px",
+              borderColor: "#ffffff",
+              background: "#FFFFFF",
+              color: "#0F0F0F",
+              textTransform: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": {
+                borderColor: "#ffffff",
+              },
+            }}
+          >
+            View Products
+          </Button>
+        </Stack>
+      </Box>
+
+      <Box
+        sx={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 2.2,
+          }}
+        >
+          {/* Row 1 */}
+          <Box sx={{ display: "flex", gap: 2, ml: { xs: 4, sm: 8, md: 15 } }}>
+            {[1, 2].map((item) => (
+              <Box
+                key={item}
+                sx={{
+                  width: { xs: 120, sm: 150, md: 170, lg: 200 },
+                  height: { xs: 65, sm: 90, md: 100, lg: 120 },
+                  borderRadius: "55px",
+                  overflow: "hidden",
+                  boxShadow: 3,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  background: "#FFFFFF",
+
+                }}
+              >
+                <img
+
+                  src={`/images/img${item}.jpg`}
+                  alt="products"
+                  style={{ width: "80%", height: "80%", objectFit: "contain" }}
+                />
+              </Box>
+            ))}
+          </Box>
+
+          {/* Row 2 */}
+          <Box sx={{ display: "flex", gap: 1 }}>
+            {[3, 4, 5].map((item) => (
+              <Box
+                key={item}
+                sx={{
+                  width: { xs: 120, sm: 150, md: 170, lg: 200 },
+                  height: { xs: 65, sm: 90, md: 100, lg: 120 },
+                  borderRadius: "55px",
+                  overflow: "hidden",
+                  boxShadow: 3,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  background: "#FFFFFF",
+                }}
+              >
+                <img
+                  src={`/images/img${item}.jpg`}
+                  alt="secondrow"
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                />
+              </Box>
+            ))}
+          </Box>
+
+          {/* Row 3 */}
+          <Box sx={{ display: "flex", gap: 2, ml: { xs: 4, sm: 8, md: 15 } }}>
+            {[6, 7].map((item) => (
+              <Box
+                key={item}
+                sx={{
+                  width: { xs: 120, sm: 150, md: 170, lg: 200 },
+                  height: { xs: 65, sm: 90, md: 100, lg: 120 },
+                  borderRadius: "55px",
+                  overflow: "hidden",
+                  boxShadow: 3,
+                  background: "#FFFFFF",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={`/images/img${item}.jpg`}
+                  alt="thirdeow"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </Box>
+            ))}
+          </Box>
+        </Box>
       </Box>
     </Box>
+
   );
 }

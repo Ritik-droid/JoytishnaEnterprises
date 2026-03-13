@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -16,11 +15,10 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Products", href: "/products" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
-  { label: "Download Brochure", href: "/biotech_solution.pdf", newTab: true },
+  { label: "About Us", href: "#about" },
+  { label: "Products", href: "#products" },
+  { label: "Contact US", href: "/contact" },
+  { label: "Book a Call", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -34,7 +32,6 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
-  // ✅ Prevent hydration mismatch
   if (!mounted) return null;
 
   return (
@@ -47,9 +44,9 @@ export default function Navbar() {
           left: 0,
           right: 0,
           mx: "auto",
-          backgroundColor: "#ffffffb8",
+          backgroundColor: "transparent",
           backdropFilter: "blur(5px)",
-          borderRadius: "30px",
+          borderRadius: "10px",
           width: {
             xs: "calc(100% - 56px)",
             sm: "calc(100% - 24px)",
@@ -66,46 +63,29 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/Biotech_Solution.png" // put your logo inside public folder
-            alt="Biotech Solution Logo"
-            width={40}
-            height={40}
+            src="/logo.png"
+            alt="jyotishnaLogo"
+            width={120}
+            height={100}
             style={{ objectFit: "contain" }}
           />
-          <Typography
-            sx={{
-              px:2,
-              flexGrow: 1,
-              fontSize: { xs: 20, md: 20 },
-              fontWeight: 600,
-              color: "#333333",
-              fontFamily: "var(--font-teachers)"
-            }}
-          >
-            Biotech Solution
-          </Typography>
+          <Box sx={{ flexGrow: 1 }} />
 
           {!isMobile && (
-            <Box sx={{ display: "flex", gap: 3,fontFamily: "var(--font-jost)" }}>
+            <Box sx={{ display: "flex", gap: 3, fontFamily: "var(--font-jost)" }}>
               {navLinks.map((link) => {
-                const isBrochure = link.label === "Download Brochure";
 
                 return (
                   <Link
                     key={link.label}
                     href={link.href}
-                    target={link.newTab ? "_blank" : "_self"}
+                    scroll={true}
                     style={{ textDecoration: "none" }}
                   >
                     <Box
                       sx={{
                         px: 2,
                         py: 1,
-                        fontWeight: isBrochure ? 500 : 400,
-                        borderRadius: isBrochure ? "12px" : 0,
-                        backgroundColor: isBrochure ? "#FFD700" : "transparent",
-                        color: isBrochure ? "#333333" : "#333",
-                        textDecoration: isBrochure ? "underline" : "none", // ✅ Underline fixed
                         transition: "0.3s",
                         "&:hover": {
                           opacity: 0.85,
@@ -122,7 +102,7 @@ export default function Navbar() {
 
           {isMobile && (
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon />
+              <MenuIcon sx={{ color: "#ffffff" }} />
             </IconButton>
           )}
         </Toolbar>
@@ -132,23 +112,14 @@ export default function Navbar() {
         anchor="right"
         open={open}
         onClose={() => setOpen(false)}
-        PaperProps={{
-          sx: { width: 260 },
-        }}
+
       >
         <Box sx={{ p: 3 }}>
-          <Typography sx={{ fontSize: 20, fontWeight: 600, mb: 3 }}>
-            Biotech Solution
-          </Typography>
+
           {navLinks.map((link) => (
             <Button
               key={link.href}
-              component={link.newTab ? "a" : Link}
               href={link.href}
-              {...(link.newTab && {
-                target: "_blank",
-                rel: "noopener noreferrer",
-              })}
               onClick={() => setOpen(false)}
               sx={{
                 display: "block",
