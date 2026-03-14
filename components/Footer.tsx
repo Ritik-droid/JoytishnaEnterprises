@@ -60,7 +60,7 @@ const Footer = () => {
             }}
           >
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="jyotishnaLogo"
               width={120}
               height={100}

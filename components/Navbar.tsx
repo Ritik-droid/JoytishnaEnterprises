@@ -16,7 +16,7 @@ import Image from "next/image";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "#about" },
-  { label: "Products", href: "#products" },
+  { label: "Products", href: "/products" },
   { label: "Contact US", href: "/contact" },
   { label: "Book a Call", href: "/contact" },
 ];
@@ -44,9 +44,9 @@ export default function Navbar() {
           left: 0,
           right: 0,
           mx: "auto",
-          backgroundColor: "#ffffff9a",
-          backdropFilter: "blur(25px)",
-          borderRadius: "40px",
+          backgroundColor: "transparent",
+          backdropFilter: "blur(15px)",
+          borderRadius: "10px",
           width: {
             xs: "calc(100% - 56px)",
             sm: "calc(100% - 24px)",
@@ -63,10 +63,10 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/logo.png"
+            src="/logo2.png"
             alt="jyotishnaLogo"
-            width={110}
-            height={80}
+            width={120}
+            height={100}
             style={{ objectFit: "contain" }}
           />
           <Box sx={{ flexGrow: 1 }} />
@@ -102,7 +102,7 @@ export default function Navbar() {
 
           {isMobile && (
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon sx={{ color: "#000000" }} />
+              <MenuIcon sx={{ color: "#ffffff" }} />
             </IconButton>
           )}
         </Toolbar>
