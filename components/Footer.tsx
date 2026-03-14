@@ -216,7 +216,7 @@ const Footer = () => {
               justifyContent: "center",
               "&:hover": { background: "#1ebe5d" },
             }}
-            href="https://wa.me/7498541851"
+            href="https://wa.me/9665316851"
             target="_blank"
           >
             WhatsApp Chat
