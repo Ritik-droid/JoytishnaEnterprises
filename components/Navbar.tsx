@@ -44,9 +44,9 @@ export default function Navbar() {
           left: 0,
           right: 0,
           mx: "auto",
-          backgroundColor: "transparent",
-          backdropFilter: "blur(5px)",
-          borderRadius: "10px",
+          backgroundColor: "#ffffff9a",
+          backdropFilter: "blur(25px)",
+          borderRadius: "40px",
           width: {
             xs: "calc(100% - 56px)",
             sm: "calc(100% - 24px)",
@@ -65,8 +65,8 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="jyotishnaLogo"
-            width={120}
-            height={100}
+            width={110}
+            height={80}
             style={{ objectFit: "contain" }}
           />
           <Box sx={{ flexGrow: 1 }} />
@@ -102,7 +102,7 @@ export default function Navbar() {
 
           {isMobile && (
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon sx={{ color: "#ffffff" }} />
+              <MenuIcon sx={{ color: "#000000" }} />
             </IconButton>
           )}
         </Toolbar>
@@ -125,7 +125,7 @@ export default function Navbar() {
                 display: "block",
                 width: "100%",
                 justifyContent: "flex-start",
-                color: "#333333",
+                color: "#000000",
                 textTransform: "none",
                 mb: 1,
               }}

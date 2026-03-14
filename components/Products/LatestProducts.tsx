@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 
 export default function Latestproducts() {
-const [hovered, setHovered] = useState<number | null>(null);
+  const [hovered, setHovered] = useState<number | null>(null);
   const products = Array.from({ length: 19 });
 
   return (
@@ -34,6 +34,7 @@ const [hovered, setHovered] = useState<number | null>(null);
         sx={{
           display: "flex",
           gap: 2,
+          justifyContent: "center",
           overflowX: "auto",
         }}
       >
@@ -43,8 +44,18 @@ const [hovered, setHovered] = useState<number | null>(null);
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
             sx={{
-              width: hovered === index ? "260px" : "50px",
-              height: "400px",
+              width: {
+                xs: hovered === index ? "180px" : "35px",
+                sm: hovered === index ? "200px" : "40px",
+                md: hovered === index ? "230px" : "45px",
+                lg: hovered === index ? "260px" : "50px",
+              },
+              height: {
+                xs: "260px",
+                sm: "300px",
+                md: "340px",
+                lg: "400px",
+              },
               background: "#1A1A1A",
               borderRadius: "12px",
               flexShrink: 0,

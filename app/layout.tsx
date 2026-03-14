@@ -3,6 +3,7 @@ import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Teachers,Jost } from "next/font/google";
+import NavContact from "@/components/NavContact";
 const teachers = Teachers({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <div className="app-layout">
+            {/* <NavContact/> */}
             <Navbar />
             <main className="page-content">{children}</main>
             <Footer />
