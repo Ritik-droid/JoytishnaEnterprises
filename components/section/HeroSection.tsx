@@ -3,6 +3,19 @@
 import { Box, Typography, Button, Stack, Link } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 export default function HeroSection() {
+  const FirstRowimages = [
+    "/HomePageImages/img1.png",
+    "/HomePageImages/img2.png",
+  ];
+  const SecondRowimages = [
+    "/HomePageImages/img3.png",
+    "/HomePageImages/img4.png",
+    "/HomePageImages/img5.png",
+  ];
+  const ThirdRowimages = [
+    "/HomePageImages/img6.png",
+    "/HomePageImages/img7.png",
+  ];
   return (
     <Box
       sx={{
@@ -24,7 +37,7 @@ export default function HeroSection() {
           flex: 1,
           flexDirection: "column",
           alignItems: { xs: "center", md: "flex-start" },
-          textAlign:{ xs: "center", md: "left" },
+          textAlign: { xs: "center", md: "left" },
           py: { xs: 15, md: 20 },
           px: 2,
           maxWidth: 1100,
@@ -136,7 +149,7 @@ export default function HeroSection() {
         >
           {/* Row 1 */}
           <Box sx={{ display: "flex", gap: 2, ml: { xs: 4, sm: 8, md: 15 } }}>
-            {[1, 2].map((item) => (
+            {FirstRowimages.map((item) => (
               <Box
                 key={item}
                 sx={{
@@ -149,14 +162,12 @@ export default function HeroSection() {
                   justifyContent: "center",
                   alignItems: "center",
                   background: "#FFFFFF",
-
                 }}
               >
                 <img
-
-                  src={`/images/img${item}.jpg`}
+                  src={item}
                   alt="products"
-                  style={{ width: "80%", height: "80%", objectFit: "contain" }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </Box>
             ))}
@@ -164,7 +175,7 @@ export default function HeroSection() {
 
           {/* Row 2 */}
           <Box sx={{ display: "flex", gap: 1 }}>
-            {[3, 4, 5].map((item) => (
+            {SecondRowimages.map((item) => (
               <Box
                 key={item}
                 sx={{
@@ -180,9 +191,9 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={`/images/img${item}.jpg`}
-                  alt="secondrow"
-                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                  src={item}
+                  alt="products"
+                  style={{ width: "100%", height: "100%" }}
                 />
               </Box>
             ))}
@@ -190,7 +201,7 @@ export default function HeroSection() {
 
           {/* Row 3 */}
           <Box sx={{ display: "flex", gap: 2, ml: { xs: 4, sm: 8, md: 15 } }}>
-            {[6, 7].map((item) => (
+            {ThirdRowimages.map((item) => (
               <Box
                 key={item}
                 sx={{
@@ -206,9 +217,9 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={`/images/img${item}.jpg`}
-                  alt="thirdeow"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  src={item}
+                  alt="products"
+                  style={{ width: "100%", height: "100%" }}
                 />
               </Box>
             ))}
@@ -216,6 +227,5 @@ export default function HeroSection() {
         </Box>
       </Box>
     </Box>
-
   );
 }

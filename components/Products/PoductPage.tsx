@@ -1,11 +1,11 @@
 "use client";
-
 import { Box, Typography, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { products } from "@/data/products";
+import { useRouter } from "next/navigation";
 
 export default function ProductPage() {
-  const products = Array.from({ length: 6 });
-
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -52,7 +52,7 @@ export default function ProductPage() {
           maxWidth: "1800px",
         }}
       >
-        {products.map((_, index) => (
+        {products.map((product, index) => (
           <Box
             key={index}
             sx={{
@@ -61,7 +61,7 @@ export default function ProductPage() {
               gap: 2,
             }}
           >
-            {/* Image Box */}
+            {/* Image */}
             <Box
               sx={{
                 background: "#1A1A1A",
@@ -71,8 +71,8 @@ export default function ProductPage() {
             >
               <Box
                 component="img"
-                src="https://via.placeholder.com/400x250"
-                alt="product"
+                src={product.image}
+                alt={product.heading}
                 sx={{
                   width: "100%",
                   height: "300px",
@@ -81,60 +81,50 @@ export default function ProductPage() {
               />
             </Box>
 
-            {/* Content Outside Box */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 2,
-              }}
-            >
-              {/* Price */}
-              <Typography
-                sx={{
-                  color: "#FFFFFF",
-                  fontWeight: 700,
-                  fontSize: "18px",
-                }}
-              >
-                ₹0.80 / Piece
-              </Typography>
-
-              {/* Heading */}
+            {/* Content */}
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography
                 sx={{
                   color: "#fff",
-                  fontWeight: 200,
-                  fontSize: "15px",
+                  fontWeight: 600,
+                  fontSize: "18px",
                 }}
               >
-                Product Name
+                {product.heading}
               </Typography>
 
-              {/* Button */}
-              <Button
-                endIcon={<ArrowForwardIcon />}
+              <Typography
                 sx={{
-                  background: "#FFF83A",
-                  color: "#000",
-                  fontWeight: 500,
-                  textTransform: "none",
-                  borderRadius: "30px",
-                  px: 1,
-                  py: 1,
-                  alignSelf: "flex-start",
-                  "&:hover": {
-                    background: "#e6df33",
-                  },
+                  color: "#aaa",
+                  fontSize: "14px",
                 }}
               >
-                Yes I'm Interested
-              </Button>
+                {product.description}
+              </Typography>
             </Box>
+            {/* Button */}
+            <Button
+              endIcon={<ArrowForwardIcon />}
+              onClick={() => router.push(`/products/${product.slug}`)}
+              sx={{
+                background: "#FFF83A",
+                color: "#000",
+                fontWeight: 500,
+                textTransform: "none",
+                borderRadius: "15px",
+                px: 2,
+                py: 1,
+                alignSelf: "flex-start",
+                "&:hover": {
+                  background: "#e6df33",
+                },
+              }}
+            >
+              View Details
+            </Button>
           </Box>
         ))}
       </Box>
-
     </Box>
   );
 }

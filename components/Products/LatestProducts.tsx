@@ -5,8 +5,17 @@ import { useState } from "react";
 
 export default function Latestproducts() {
   const [hovered, setHovered] = useState<number | null>(null);
-  const products = Array.from({ length: 19 });
-
+  const products = [
+    "/HomePageImages/img1.png",
+    "/HomePageImages/img2.png",
+    "/HomePageImages/img3.png",
+    "/HomePageImages/img4.png",
+    "/HomePageImages/img5.png",
+    "/HomePageImages/img6.png",
+    "/HomePageImages/img7.png",
+    "/HomePageImages/img8.png",
+    "/HomePageImages/img9.png",
+  ];
   return (
     <Box
       id="products"
@@ -38,7 +47,7 @@ export default function Latestproducts() {
           overflowX: "auto",
         }}
       >
-        {products.map((_, index) => (
+        {products.map((src, index) => (
           <Box
             key={index}
             onMouseEnter={() => setHovered(index)}
@@ -62,8 +71,22 @@ export default function Latestproducts() {
               border: "1px solid #333",
               transition: "all 0.4s ease",
               cursor: "pointer",
+              overflow: "hidden",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          />
+          >
+            <img
+              src={src}
+              alt={`product-${index}`}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </Box>
         ))}
       </Box>
     </Box>
