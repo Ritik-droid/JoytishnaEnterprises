@@ -4,9 +4,9 @@ import { Box, Typography } from "@mui/material";
 
 export default function Products() {
   const products = [
-    { img: "/images/img1.jpg", title: "ASTM Fasteners" },
-    { img: "/images/img2.jpg", title: "SS Fasteners" },
-    { img: "/images/img3.jpg", title: "High Tensile Fasteners" },
+    { img: "/cement.png", title: "ASTM Fasteners" },
+    { img: "/automobile.png", title: "SS Fasteners" },
+    { img: "/pharma.png", title: "High Tensile Fasteners" },
     { img: "/images/img4.jpg", title: "Bolts & Nuts" },
     { img: "/images/img1.jpg", title: "Industrial Screws" },
     { img: "/images/img2.jpg", title: "Washers" },
@@ -78,8 +78,8 @@ export default function Products() {
                 src={product.img}
                 alt=""
                 style={{
-                  width: "90%",
-                  height: "90%",
+                  width: "100%",
+                  height: "100%",
                   objectFit: "cover",
                   borderRadius: "inherit",
                 }}
