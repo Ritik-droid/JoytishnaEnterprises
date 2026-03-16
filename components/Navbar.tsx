@@ -17,8 +17,8 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "#about" },
   { label: "Products", href: "/products" },
-  { label: "Contact US", href: "/contact" },
-  { label: "Book a Call", href: "/contact" },
+  { label: "Contact US", href: "#contact" },
+  { label: "Book a Call", href: "#contact" },
 ];
 
 export default function Navbar() {

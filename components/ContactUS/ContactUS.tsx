@@ -2,9 +2,30 @@
 import Link from "next/link";
 import { Box, Typography, TextField, Button, IconButton } from "@mui/material";
 import { LocationOn, Email, Phone, Factory } from "@mui/icons-material";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 export default function Products() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const scrollToContact = () => {
+      if (window.location.hash === "#contact") {
+        const element = document.getElementById("contact");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    scrollToContact();
+
+    window.addEventListener("hashchange", scrollToContact);
+
+    return () => {
+      window.removeEventListener("hashchange", scrollToContact);
+    };
+  }, [pathname]);
+
   const commonTextFieldStyles = {
     mb: 2,
     "& .MuiOutlinedInput-root": {
@@ -48,7 +69,7 @@ export default function Products() {
   };
 
   return (
-    <Box sx={{ py: 16, backgroundColor: "#0F0F0F" }}>
+    <Box id="contact" sx={{ py: 16, backgroundColor: "#0F0F0F" }}>
       {/* CONTENT CONTAINER */}
       <Box
         sx={{
@@ -286,6 +307,22 @@ export default function Products() {
               </Typography>
             </Box>
           </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            height: { xs: "300px", md: "400px" },
+            borderRadius: "12px",
+            overflow: "hidden",
+          }}
+        >
+          <iframe
+            src="https://maps.google.com/maps?q=Mhatre%20Industries%20Chikhali%20Pune%20411062&t=k&z=17&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+          />
         </Box>
       </Box>
     </Box>

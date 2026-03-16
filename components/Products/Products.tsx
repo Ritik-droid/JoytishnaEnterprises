@@ -4,14 +4,16 @@ import { Box, Typography } from "@mui/material";
 
 export default function Products() {
   const products = [
-    { img: "/cement.png", title: "ASTM Fasteners" },
-    { img: "/automobile.png", title: "SS Fasteners" },
-    { img: "/pharma.png", title: "High Tensile Fasteners" },
-    { img: "/images/img4.jpg", title: "Bolts & Nuts" },
-    { img: "/images/img1.jpg", title: "Industrial Screws" },
-    { img: "/images/img2.jpg", title: "Washers" },
-    { img: "/images/img3.jpg", title: "Anchor Fasteners" },
-    { img: "/images/img4.jpg", title: "Threaded Rods" },
+    { img: "/cement.png", title: "CEMENT" },
+    { img: "/automobile.png", title: "AUTOMOBILE" },
+    { img: "/pharma.png", title: "PHARMA" },
+        { img: "/cement.png", title: "CEMENT" },
+
+    // { img: "/images/img4.jpg", title: "Bolts & Nuts" },
+    // { img: "/images/img1.jpg", title: "Industrial Screws" },
+    // { img: "/images/img2.jpg", title: "Washers" },
+    // { img: "/images/img3.jpg", title: "Anchor Fasteners" },
+    // { img: "/images/img4.jpg", title: "Threaded Rods" },
   ];
 
   return (
@@ -108,6 +110,9 @@ export default function Products() {
             </Box>
           );
         })}
+      </Box>
+      <Box>
+        
       </Box>
     </Box>
   );

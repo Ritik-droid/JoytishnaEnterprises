@@ -1,4 +1,7 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Image from "next/image";
+import Link from "next/link";
 
 export default async function ProductDetail({
   params,
@@ -134,6 +137,131 @@ export default async function ProductDetail({
         >
           {product.info}
         </Typography>
+      </Box>
+
+      <Box>
+        <Typography
+          sx={{
+            fontSize: { xs: "40px", md: "78px" },
+            fontWeight: 700,
+            textAlign: "left",
+            mt: 8,
+            lineHeight: 0.9,
+            fontFamily: "var(--font-teachers)",
+            color: "transparent",
+            WebkitTextStroke: "1px #FFFFFF",
+          }}
+        >
+          Related
+        </Typography>
+
+        <Typography
+          sx={{
+            fontSize: { xs: "40px", md: "78px" },
+            fontWeight: 700,
+            textAlign: "left",
+            lineHeight: 1.2, // reduces gap
+            fontFamily: "var(--font-teachers)",
+          }}
+        >
+          Products
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "1fr,1fr,1fr",
+            sm: "1fr 1fr",
+            md: "1fr 1fr 1fr",
+            lg: "1fr 1fr 1fr",
+          },
+          gap: 10,
+          mt: 6,
+        }}
+      >
+        {product.relatedProducts?.map((item: any, index: number) => (
+          <Box
+            key={index}
+            sx={{
+              background: "transparent",
+              borderRadius: "12px",
+              overflow: "hidden",
+              border: "1px solid transparent",
+            }}
+          >
+            <Box sx={{ borderRadius: "12px", overflow: "hidden" }}>
+              <Box
+                sx={{
+                  border: "1px solid #FFFFFF",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src={item.image}
+                  alt="related-product"
+                  width={400}
+                  height={300}
+                  style={{
+                    width: "100%",
+                    height: "350px",
+                    objectFit: "cover",
+                  }}
+                />
+              </Box>
+            </Box>
+
+            {/* Content */}
+            <Box sx={{ p: 2 }}>
+              {/* Price */}
+              <Typography
+                sx={{
+                  color: "#FFF83A",
+                  fontWeight: 700,
+                  fontSize: "16px",
+                  mb: 1,
+                }}
+              >
+                {item.price}
+              </Typography>
+              {/* Description */}
+              <Typography
+                sx={{
+                  color: "#aaa",
+                  fontSize: "14px",
+                  lineHeight: "22px",
+                }}
+              >
+                {item.text}
+              </Typography>
+
+              <Link
+                href={`/#contact?product=${encodeURIComponent(item.text)}`}
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  endIcon={<ArrowForwardIcon />}
+                  sx={{
+                    width: "172px",
+                    height: "40.5px",
+                    background: "#FFF83A",
+                    color: "#000",
+                    borderRadius: "20px",
+                    mt: 2,
+                    textTransform: "none",
+                    fontWeight: 600,
+                    "&:hover": {
+                      background: "#e6df30",
+                    },
+                  }}
+                >
+                  Yes I'm Interested
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+        ))}
       </Box>
     </Box>
   );
