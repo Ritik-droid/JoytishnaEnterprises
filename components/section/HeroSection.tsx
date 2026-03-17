@@ -72,10 +72,8 @@ export default function HeroSection() {
             fontFamily: "Jost",
           }}
         >
-          We are pleased to introduce Jyotishna, a prominent Pune-based importer
-          and stockiest established in 2026. We specialize in the supply of ASTM
-          A193 Gr. B7 and A194 Gr. 2H fasteners, committed to providing
-          industry-leading standards and service.
+          “Powering industries with reliable fastening and motion
+          solutions—locally strong, globally connected.”
         </Typography>
 
         <Stack

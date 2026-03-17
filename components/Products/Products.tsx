@@ -7,7 +7,7 @@ export default function Products() {
     { img: "/cement.png", title: "CEMENT" },
     { img: "/automobile.png", title: "AUTOMOBILE" },
     { img: "/pharma.png", title: "PHARMA" },
-        { img: "/cement.png", title: "CEMENT" },
+        { img: "/Food.png", title: "FOOD" },
 
     // { img: "/images/img4.jpg", title: "Bolts & Nuts" },
     // { img: "/images/img1.jpg", title: "Industrial Screws" },

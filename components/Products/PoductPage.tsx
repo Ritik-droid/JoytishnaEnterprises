@@ -67,6 +67,7 @@ export default function ProductPage() {
                 background: "#1A1A1A",
                 borderRadius: "16px",
                 overflow: "hidden",
+                border: "1px solid #FFFFFF",
               }}
             >
               <Box

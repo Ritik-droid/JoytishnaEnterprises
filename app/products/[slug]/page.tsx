@@ -214,17 +214,7 @@ export default async function ProductDetail({
 
             {/* Content */}
             <Box sx={{ p: 2 }}>
-              {/* Price */}
-              <Typography
-                sx={{
-                  color: "#FFF83A",
-                  fontWeight: 700,
-                  fontSize: "16px",
-                  mb: 1,
-                }}
-              >
-                {item.price}
-              </Typography>
+
               {/* Description */}
               <Typography
                 sx={{

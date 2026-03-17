@@ -62,4 +62,22 @@ export const products = [
     description:
       "HT External Circlips and HT Internal Circlips used in mechanical assemblies.",
   },
+  {
+    slug: "sp-rockets",
+    image: "/HomePageImages/img10.png",
+    heading: "Sprockets",
+    description: "",
+  },
+  {
+    slug: "flange-Nut",
+    image: "/HomePageImages/img11.png",
+    heading: "Flange Nut",
+    description: "",
+  },
+  {
+    slug: "allen-Key",
+    image: "/HomePageImages/img12.png",
+    heading: "Allen Key",
+    description: "Allen key Allen Button Head",
+  },
 ];
