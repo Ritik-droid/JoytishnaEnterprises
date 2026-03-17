@@ -157,6 +157,7 @@ export default function HeroSection() {
                   overflow: "hidden",
                   boxShadow: 3,
                   display: "flex",
+                  border: "1px solid #ffffff",
                   justifyContent: "center",
                   alignItems: "center",
                   background: "#FFFFFF",
@@ -165,7 +166,7 @@ export default function HeroSection() {
                 <img
                   src={item}
                   alt="products"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </Box>
             ))}
@@ -183,6 +184,8 @@ export default function HeroSection() {
                   overflow: "hidden",
                   boxShadow: 3,
                   display: "flex",
+                  border: "1px solid #ffffff",
+
                   justifyContent: "center",
                   alignItems: "center",
                   background: "#FFFFFF",
@@ -209,6 +212,8 @@ export default function HeroSection() {
                   overflow: "hidden",
                   boxShadow: 3,
                   background: "#FFFFFF",
+                  border: "1px solid #ffffff",
+
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",

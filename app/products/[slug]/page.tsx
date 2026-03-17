@@ -1,3 +1,4 @@
+"use client";
 import { Box, Button, Typography } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "next/image";
@@ -214,7 +215,6 @@ export default async function ProductDetail({
 
             {/* Content */}
             <Box sx={{ p: 2 }}>
-
               {/* Description */}
               <Typography
                 sx={{
@@ -226,29 +226,29 @@ export default async function ProductDetail({
                 {item.text}
               </Typography>
 
-              <Link
-                href={`/#contact?product=${encodeURIComponent(item.text)}`}
-                style={{ textDecoration: "none" }}
+              <Button
+                endIcon={<ArrowForwardIcon />}
+                onClick={() => {
+                  const message = `Hello, I am interested in ${item.text}`;
+                  const url = `https://wa.me/919665316851?text=${encodeURIComponent(message)}`;
+                  window.open(url, "_blank");
+                }}
+                sx={{
+                  width: "172px",
+                  height: "40.5px",
+                  background: "#FFF83A",
+                  color: "#000",
+                  borderRadius: "20px",
+                  mt: 2,
+                  textTransform: "none",
+                  fontWeight: 600,
+                  "&:hover": {
+                    background: "#e6df30",
+                  },
+                }}
               >
-                <Button
-                  endIcon={<ArrowForwardIcon />}
-                  sx={{
-                    width: "172px",
-                    height: "40.5px",
-                    background: "#FFF83A",
-                    color: "#000",
-                    borderRadius: "20px",
-                    mt: 2,
-                    textTransform: "none",
-                    fontWeight: 600,
-                    "&:hover": {
-                      background: "#e6df30",
-                    },
-                  }}
-                >
-                  Yes I'm Interested
-                </Button>
-              </Link>
+                Yes I'm Interested
+              </Button>
             </Box>
           </Box>
         ))}
