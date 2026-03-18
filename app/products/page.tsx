@@ -52,6 +52,8 @@ export default function Products() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                fontFamily: "var(--font-jost)",
+
                 width: { xs: "30%", sm: "30%", md: "auto" }, // mobile rows
               }}
             >
@@ -72,6 +74,7 @@ export default function Products() {
                   alignItems: "center",
                   justifyContent: "center",
                   transition: "all 0.3s ease",
+                  fontFamily: "var(--font-jost)",
                 }}
               >
                 <Typography
@@ -80,6 +83,7 @@ export default function Products() {
                     color: textColor,
                     fontSize: { xs: "14px", md: "18px" },
                     whiteSpace: "nowrap",
+                    fontFamily: "var(--font-jost)",
                   }}
                 >
                   {item}
@@ -112,7 +116,7 @@ export default function Products() {
         })}
       </Box>
 
-        <ProductPage/>
+      <ProductPage />
     </Box>
   );
 }

@@ -3,6 +3,7 @@ import { Box, Typography, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { products } from "@/data/products";
 import { useRouter } from "next/navigation";
+import ContactUS from "@/components/ContactUS/ContactUS";
 
 export default function ProductPage() {
   const router = useRouter();
@@ -21,6 +22,7 @@ export default function ProductPage() {
         position: "relative",
         overflow: "hidden",
         minHeight: "100vh",
+        fontFamily: "var(--font-jost)",
       }}
     >
       {/* Title */}
@@ -126,6 +128,7 @@ export default function ProductPage() {
           </Box>
         ))}
       </Box>
+      <ContactUS />
     </Box>
   );
 }

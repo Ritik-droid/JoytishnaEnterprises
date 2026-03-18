@@ -19,7 +19,7 @@ const Footer = () => {
       icon: Twitter,
       url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
     },
-        {
+    {
       icon: InstagramIcon,
       url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
     },
@@ -62,11 +62,10 @@ const Footer = () => {
             <Image
               src="/logo2.png"
               alt="jyotishnaLogo"
-              width={120}
+              width={150}
               height={100}
               style={{ objectFit: "contain" }}
             />
-
 
             <Box sx={{ display: "flex", gap: 1, mt: 2 }}>
               {socialLinks.map(({ icon: Icon, url }, i) => (
@@ -94,10 +93,11 @@ const Footer = () => {
               maxWidth={320}
               sx={{
                 color: "#33333",
-                fontFamily: "var(--font-jest)",
+                fontFamily: "var(--font-jost)",
               }}
             >
-              Gate No. 1430, Chinchecha Mala, Mhatre Industries, Chikhali, Pune – 411062
+              Gate No. 1430, Chinchecha Mala, Mhatre Industries, Chikhali, Pune
+              – 411062
             </Typography>
           </Box>
 
@@ -110,10 +110,10 @@ const Footer = () => {
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
+
+              fontFamily: "var(--font-jost)",
             }}
           >
-
-
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
               {[
                 { label: "Home", href: "/" },
@@ -163,16 +163,11 @@ const Footer = () => {
 
             {[
               {
-
-                text: `Family Industries`,
-              },
-              {
                 text: "sales@jyotishnaenterprises.com",
               },
               {
-                text: "+91 8668375337",
+                text: "+91 9665316851",
               },
-
             ].map((item, i) => (
               <Box
                 key={i}
@@ -189,7 +184,7 @@ const Footer = () => {
                   fontSize={14}
                   lineHeight={1.5}
                   sx={{
-                    fontFamily: "var(--font-jest)",
+                    fontFamily: "var(--font-jost)",
                   }}
                 >
                   {item.text}
@@ -197,56 +192,55 @@ const Footer = () => {
               </Box>
             ))}
           </Box>
-       
-               <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
 
-                          <Button
-            variant="contained"
-            endIcon={<ArrowOutwardIcon />}
-            sx={{
-              background: "#A9FF5C",
-              minWidth: 180,
-              height: 48,
-              borderRadius: "15px",
-              color: "#0F0F0F",
-              textTransform: "none",
-              fontFamily: "Jost",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              "&:hover": { background: "#1ebe5d" },
-            }}
-            href="https://wa.me/9665316851"
-            target="_blank"
-          >
-            WhatsApp Chat
-          </Button>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+            <Button
+              variant="contained"
+              endIcon={<ArrowOutwardIcon />}
+              sx={{
+                background: "#A9FF5C",
+                minWidth: 180,
+                height: 48,
+                borderRadius: "15px",
+                color: "#0F0F0F",
+                textTransform: "none",
+                fontFamily: "Jost",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                "&:hover": { background: "#1ebe5d" },
+              }}
+              href="https://wa.me/9665316851"
+              target="_blank"
+            >
+              WhatsApp Chat
+            </Button>
 
-          <Button
-            variant="outlined"
-            component={Link}
-            href="/products"
-            sx={{
-              minWidth: 180,
-              height: 48,
-              borderRadius: "15px",
-              borderColor: "#ffffff",
-              background: "#FFFFFF",
-              color: "#0F0F0F",
-              textTransform: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              "&:hover": {
+            <Button
+              variant="outlined"
+              component={Link}
+              href="/products"
+              sx={{
+                minWidth: 180,
+                height: 48,
+                borderRadius: "15px",
                 borderColor: "#ffffff",
-              },
-            }}
-          >
-            View Products
-          </Button>
-               </Box>
-       
-       
+                background: "#FFFFFF",
+                color: "#0F0F0F",
+                textTransform: "none",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontFamily: "var(--font-jost)",
+
+                "&:hover": {
+                  borderColor: "#ffffff",
+                },
+              }}
+            >
+              View Products
+            </Button>
+          </Box>
         </Box>
 
         {/* Divider */}
@@ -266,6 +260,7 @@ const Footer = () => {
             fontSize: 13,
             color: "#fff",
             opacity: 0.85,
+            fontFamily: "var(--font-jost)",
           }}
         >
           © 2026 Jyotishna Enterprises. All rights reserved.
@@ -277,6 +272,7 @@ const Footer = () => {
             fontSize: 13,
             color: "#fff",
             opacity: 0.85,
+            fontFamily: "var(--font-jost)",
           }}
         >
           Design and Developed by
@@ -287,6 +283,7 @@ const Footer = () => {
             fontSize: 13,
             color: "#fff",
             opacity: 0.85,
+            fontFamily: "var(--font-jost)",
           }}
         >
           Prathmesh & Ritik- iritik358@gmail.com [+917397827579]

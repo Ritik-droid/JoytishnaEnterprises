@@ -7,7 +7,7 @@ export default function Products() {
     { img: "/cement.png", title: "CEMENT" },
     { img: "/automobile.png", title: "AUTOMOBILE" },
     { img: "/pharma.png", title: "PHARMA" },
-        { img: "/Food.png", title: "FOOD" },
+    { img: "/Food.png", title: "FOOD" },
 
     // { img: "/images/img4.jpg", title: "Bolts & Nuts" },
     // { img: "/images/img1.jpg", title: "Industrial Screws" },
@@ -22,6 +22,8 @@ export default function Products() {
       sx={{
         minHeight: "80vh",
         background: "#0F0F0F",
+        fontFamily: "var(--font-jost)",
+
         px: { xs: 3, md: 8 },
         py: 0,
         overflow: "visible",
@@ -31,7 +33,9 @@ export default function Products() {
         sx={{
           fontSize: "60px",
           fontWeight: 900,
-          fontFamily: "Teachers, sans-serif",
+
+          fontFamily: "var(--font-jost)",
+
           color: "transparent",
           WebkitTextStroke: "1px #EFECE6",
         }}
@@ -101,8 +105,8 @@ export default function Products() {
                   borderRadius: "10px",
                   fontSize: "25px",
                   fontWeight: 600,
-                  fontFamily: "Jost",
                   whiteSpace: "nowrap",
+                  fontFamily: "var(--font-jost)",
                 }}
               >
                 {product.title}
@@ -111,9 +115,7 @@ export default function Products() {
           );
         })}
       </Box>
-      <Box>
-        
-      </Box>
+      <Box></Box>
     </Box>
   );
 }

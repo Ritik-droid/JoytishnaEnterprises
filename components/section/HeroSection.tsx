@@ -47,7 +47,6 @@ export default function HeroSection() {
       >
         <Typography
           sx={{
-            fontFamily: "Teachers, sans-serif",
             fontWeight: 900,
             fontSize: { xs: "60px", md: "105px" },
             lineHeight: { xs: "60px", md: "126px" },
@@ -57,6 +56,7 @@ export default function HeroSection() {
             backgroundRepeat: "repeat",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
+            fontFamily: "var(--font-teachers)",
           }}
         >
           Jyotishna Enterprises
@@ -119,6 +119,8 @@ export default function HeroSection() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              fontFamily: "var(--font-jost)",
+
               "&:hover": {
                 borderColor: "#ffffff",
               },

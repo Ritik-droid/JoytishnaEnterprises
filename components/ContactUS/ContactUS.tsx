@@ -110,7 +110,14 @@ export default function Products() {
               Send Us A Message
             </Typography>
 
-            <Typography color="#FFFFFF" mb={0.5}>
+            <Typography
+              color="#FFFFFF"
+              mb={0.5}
+              sx={{
+                color: "#FFFFFF",
+                fontFamily: "var(--font-jost)",
+              }}
+            >
               Name
             </Typography>
             <TextField
@@ -121,7 +128,14 @@ export default function Products() {
               sx={commonTextFieldStyles}
             />
 
-            <Typography color="#FFFFFF" mb={0.5}>
+            <Typography
+              color="#FFFFFF"
+              mb={0.5}
+              sx={{
+                color: "#FFFFFF",
+                fontFamily: "var(--font-jost)",
+              }}
+            >
               Email
             </Typography>
             <TextField
@@ -132,7 +146,14 @@ export default function Products() {
               sx={commonTextFieldStyles}
             />
 
-            <Typography color="#FFFFFF" mb={0.5}>
+            <Typography
+              color="#FFFFFF"
+              mb={0.5}
+              sx={{
+                color: "#FFFFFF",
+                fontFamily: "var(--font-jost)",
+              }}
+            >
               Phone
             </Typography>
             <TextField
@@ -143,7 +164,14 @@ export default function Products() {
               sx={commonTextFieldStyles}
             />
 
-            <Typography color="#FFFFFF" mb={0.5}>
+            <Typography
+              color="#FFFFFF"
+              mb={0.5}
+              sx={{
+                color: "#FFFFFF",
+                fontFamily: "var(--font-jost)",
+              }}
+            >
               Message
             </Typography>
             <TextField

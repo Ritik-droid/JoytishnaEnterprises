@@ -22,6 +22,7 @@ export default function AboutUS() {
           textAlign: "center",
           mb: 5,
           letterSpacing: "2px",
+          fontFamily: "var(--font-teachers)",
         }}
       >
         About Us
@@ -29,7 +30,14 @@ export default function AboutUS() {
 
       {/* ================= ABOUT ================= */}
       <Box sx={{ maxWidth: "900px", mx: "auto", mb: 10 }}>
-        <Typography sx={{ color: "#BDBDBD", lineHeight: "32px", mb: 3 }}>
+        <Typography
+          sx={{
+            color: "#BDBDBD",
+            lineHeight: "32px",
+            mb: 3,
+            fontFamily: "var(--font-jost)",
+          }}
+        >
           We are a dynamic and reliable industrial trading firm specializing in
           the supply of{" "}
           <b>fasteners, bearings, chains, sprockets, and springs</b>. With a
@@ -38,7 +46,14 @@ export default function AboutUS() {
           construction, and engineering.
         </Typography>
 
-        <Typography sx={{ color: "#BDBDBD", lineHeight: "32px", mb: 3 }}>
+        <Typography
+          sx={{
+            color: "#BDBDBD",
+            lineHeight: "32px",
+            mb: 3,
+            fontFamily: "var(--font-jost)",
+          }}
+        >
           Backed by robust sourcing capabilities and a growing global network,
           we offer{" "}
           <b>
@@ -49,7 +64,13 @@ export default function AboutUS() {
           ensuring uninterrupted operations for our clients.
         </Typography>
 
-        <Typography sx={{ color: "#BDBDBD", lineHeight: "32px" }}>
+        <Typography
+          sx={{
+            color: "#BDBDBD",
+            lineHeight: "32px",
+            fontFamily: "var(--font-jost)",
+          }}
+        >
           We believe that even the smallest component plays a critical role in
           industrial performance. That’s why we prioritize{" "}
           <b>quality assurance, competitive pricing, and dependable service</b>{" "}
@@ -76,10 +97,23 @@ export default function AboutUS() {
             border: "1px solid #1F1F1F",
           }}
         >
-          <Typography sx={{ fontWeight: 700, fontSize: "22px", mb: 2 }}>
+          <Typography
+            sx={{
+              fontWeight: 700,
+              fontSize: "22px",
+              mb: 2,
+              fontFamily: "var(--font-teachers)",
+            }}
+          >
             🌍 Our Vision
           </Typography>
-          <Typography sx={{ color: "#BDBDBD", lineHeight: "30px" }}>
+          <Typography
+            sx={{
+              color: "#BDBDBD",
+              lineHeight: "30px",
+              fontFamily: "var(--font-jost)",
+            }}
+          >
             To become a trusted global partner in industrial supply, recognized
             for quality, reliability, and excellence in delivering fastening and
             power transmission solutions.
@@ -96,12 +130,24 @@ export default function AboutUS() {
             border: "1px solid #1F1F1F",
           }}
         >
-          <Typography sx={{ fontWeight: 700, fontSize: "22px", mb: 2 }}>
+          <Typography
+            sx={{
+              fontWeight: 700,
+              fontSize: "22px",
+              mb: 2,
+              fontFamily: "var(--font-teachers)",
+            }}
+          >
             🎯 Our Mission
           </Typography>
           <Box
             component="ul"
-            sx={{ pl: 2, color: "#BDBDBD", lineHeight: "30px" }}
+            sx={{
+              pl: 2,
+              color: "#BDBDBD",
+              lineHeight: "30px",
+              fontFamily: "var(--font-jost)",
+            }}
           >
             <li>
               Provide high-quality industrial products that meet international
@@ -125,6 +171,7 @@ export default function AboutUS() {
             fontSize: { xs: "26px", md: "32px" },
             textAlign: "center",
             mb: 6,
+            fontFamily: "var(--font-teachers)",
           }}
         >
           💡 Our Core Values
@@ -174,10 +221,22 @@ export default function AboutUS() {
                 },
               }}
             >
-              <Typography sx={{ fontWeight: 600, mb: 1 }}>
+              <Typography
+                sx={{
+                  fontWeight: 600,
+                  mb: 1,
+                  fontFamily: "var(--font-teachers)",
+                }}
+              >
                 {item.title}
               </Typography>
-              <Typography sx={{ color: "#9E9E9E", fontSize: "14px" }}>
+              <Typography
+                sx={{
+                  color: "#9E9E9E",
+                  fontSize: "14px",
+                  fontFamily: "var(--font-jost)",
+                }}
+              >
                 {item.desc}
               </Typography>
             </Box>
@@ -187,7 +246,14 @@ export default function AboutUS() {
 
       {/* ================= OFFERINGS ================= */}
       <Box sx={{ textAlign: "center", mb: 10 }}>
-        <Typography sx={{ fontWeight: 800, fontSize: "30px", mb: 3 }}>
+        <Typography
+          sx={{
+            fontWeight: 800,
+            fontSize: "30px",
+            mb: 3,
+            fontFamily: "var(--font-teachers)",
+          }}
+        >
           ⚙️ What We Offer
         </Typography>
 
@@ -198,6 +264,7 @@ export default function AboutUS() {
             p: 0,
             color: "#BDBDBD",
             lineHeight: "32px",
+            fontFamily: "var(--font-jost)",
           }}
         >
           <li>Industrial Fasteners (Bolts, Nuts, Washers)</li>
@@ -217,6 +284,7 @@ export default function AboutUS() {
           mb: 6,
           maxWidth: "700px",
           mx: "auto",
+          fontFamily: "var(--font-teachers)",
         }}
       >
         “To power industries with dependable components and build lasting
@@ -229,6 +297,7 @@ export default function AboutUS() {
           endIcon={<ArrowForwardIcon />}
           sx={{
             background: "#EFECE6",
+            visibility: "collapse",
             color: "#000",
             px: 5,
             py: 1.5,

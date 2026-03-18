@@ -18,7 +18,7 @@ const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Products", href: "/products" },
   { label: "Contact US", href: "#contact" },
-  { label: "Book a Call", href: "#contact" },
+  { label: "Download Cataloue", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -65,16 +65,17 @@ export default function Navbar() {
           <Image
             src="/logo2.png"
             alt="jyotishnaLogo"
-            width={120}
+            width={150}
             height={100}
             style={{ objectFit: "contain" }}
           />
           <Box sx={{ flexGrow: 1 }} />
 
           {!isMobile && (
-            <Box sx={{ display: "flex", gap: 3, fontFamily: "var(--font-jost)" }}>
+            <Box
+              sx={{ display: "flex", gap: 3, fontFamily: "var(--font-jost)" }}
+            >
               {navLinks.map((link) => {
-
                 return (
                   <Link
                     key={link.label}
@@ -108,14 +109,8 @@ export default function Navbar() {
         </Toolbar>
       </AppBar>
 
-      <Drawer
-        anchor="right"
-        open={open}
-        onClose={() => setOpen(false)}
-
-      >
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <Box sx={{ p: 3 }}>
-
           {navLinks.map((link) => (
             <Button
               key={link.href}
