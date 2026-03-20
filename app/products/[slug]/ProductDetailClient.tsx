@@ -116,7 +116,7 @@ export default function ProductDetailClient({ product }: any) {
               alt={product.heading}
               sx={{
                 width: "100%",
-                height: "200px",
+                height: "350px",
                 objectFit: "cover",
                 borderRadius: "10px",
                 border: "1px solid #2A2A2A",
@@ -214,7 +214,7 @@ export default function ProductDetailClient({ product }: any) {
               <Image
                 src={item.image}
                 alt="related-product"
-                width={400}
+                width={100}
                 height={300}
                 style={{
                   width: "100%",

@@ -18,7 +18,7 @@ const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Products", href: "/products" },
   { label: "Contact US", href: "#contact" },
-  { label: "Download Cataloue", href: "#contact" },
+  { label: "Download Catalogue", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -65,7 +65,7 @@ export default function Navbar() {
           <Image
             src="/logo2.png"
             alt="jyotishnaLogo"
-            width={150}
+            width={200}
             height={100}
             style={{ objectFit: "contain" }}
           />
