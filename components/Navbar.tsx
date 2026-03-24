@@ -62,6 +62,8 @@ export default function Navbar() {
             py: { xs: 0, md: 2 },
           }}
         >
+
+          
           <Image
             src="/logo2.png"
             alt="jyotishnaLogo"
