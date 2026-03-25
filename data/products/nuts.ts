@@ -17,77 +17,67 @@ const product = {
 
   relatedProducts: [
     {
-      image: "/products/nuts/RelatedProducts/img7.png",
+      image: "/products/nuts/RelatedProducts/Cap nut.png",
       price: "₹0.95 / Piece",
-      text: "Hex Nut",
+      text: "Cap nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img2.png",
+      image: "/products/nuts/RelatedProducts/Castle nut.png",
       price: "₹0.90 / Piece",
-      text: " Lock Nut",
+      text: " Castle nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img1.png",
+      image: "/products/nuts/RelatedProducts/Coupling nut.png",
       price: "₹0.70 / Piece",
-      text: "Heavy Hex Nut",
+      text: "Coupling nut",
     },
 
     {
-      image: "/products/nuts/RelatedProducts/img3.png",
+      image: "/products/nuts/RelatedProducts/Eye nut.png",
       price: "₹0.85 / Piece",
-      text: "Castle Nut",
+      text: "Eye nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img14.png",
+      image: "/products/nuts/RelatedProducts/Flange nut.png",
       price: "₹1.35 / Piece",
       text: "Flange Nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img4.png",
+      image: "/products/nuts/RelatedProducts/Heavy hex nut.png",
       price: "₹1.20 / Piece",
-      text: "Square Nut",
+      text: "Heavy hex nut",
     },
 
     {
-      image: "/products/nuts/RelatedProducts/img6.png",
+      image: "/products/nuts/RelatedProducts/Hex nut.png",
       price: "₹1.30 / Piece",
-      text: "Cap Nut",
+      text: "Hex nut",
     },
 
     {
-      image: "/products/nuts/RelatedProducts/img9.png",
+      image: "/products/nuts/RelatedProducts/Jam nut.png",
       price: "₹1.00 / Piece",
-      text: "Coupling Nut",
+      text: "Jam nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img10.png",
-      price: "₹1.15 / Piece",
-      text: "Wing Nut",
-    },
-    {
-      image: "/products/nuts/RelatedProducts/img11.png",
+      image: "/products/nuts/RelatedProducts/Self locking nut.png",
       price: "₹0.88 / Piece",
-      text: "T-Nut",
+      text: "Self locking nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img12.png",
+      image: "/products/nuts/RelatedProducts/Weld nut.png",
       price: "₹1.25 / Piece",
-      text: "Eye Nut",
+      text: "Weld nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img13.png",
+      image: "/products/nuts/RelatedProducts/T-nut.png",
       price: "₹1.05 / Piece",
-      text: "Jam Nut",
+      text: "T-nut",
     },
     {
-      image: "/products/nuts/RelatedProducts/img13.png",
+      image: "/products/nuts/RelatedProducts/Wing nut.png",
       price: "₹1.05 / Piece",
-      text: "Self-Locking Nut",
-    },
-    {
-      image: "/products/nuts/RelatedProducts/img13.png",
-      price: "₹1.05 / Piece",
-      text: "Weld Nut",
+      text: "Wing nut",
     },
   ],
 };

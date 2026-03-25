@@ -211,17 +211,18 @@ export default function ProductDetailClient({ product }: any) {
                 overflow: "hidden",
               }}
             >
-              <Image
-                src={item.image}
-                alt="related-product"
-                width={100}
-                height={300}
-                style={{
-                  width: "100%",
-                  height: "300px",
-                  objectFit: "cover",
-                }}
-              />
+              <Box
+                sx={{ position: "relative", width: "100%", height: "300px" }}
+              >
+                <Image
+                  src={item.image}
+                  alt="related-product"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
+              </Box>
             </Box>
 
             {/* Content */}
@@ -275,7 +276,6 @@ export default function ProductDetailClient({ product }: any) {
           }
         `}
       </style>
-
     </Box>
   );
 }

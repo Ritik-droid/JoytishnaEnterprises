@@ -3,13 +3,13 @@ const product = {
   snallInfo: "Different angles and images of Metal Washers",
 
   images: [
-    "/images/products/washers/washer1.jpg",
-    "/images/products/washers/washer2.jpg",
-    "/images/products/washers/washer3.jpg",
-    "/images/products/washers/washer4.jpg",
-    "/images/products/washers/washer5.jpg",
-    "/images/products/washers/washer6.jpg",
-    "/images/products/washers/washer7.jpg",
+    "/products/washers/Fender Washer.jpg",
+    "/products/washers/Flat Washer.jpg",
+    "/products/washers/Sealing Washer.jpg",
+    "/products/washers/Spring Washer.jpg",
+    "/products/washers/Square Washer.jpg",
+    "/products/washers/Square Washer.jpg",
+    "/products/washers/Tooth Lock Washer.jpg",
     "/images/products/washers/washer8.jpg",
   ],
 
@@ -17,44 +17,34 @@ const product = {
 
   relatedProducts: [
     {
-      image: "/images/products/washers/washer2.jpg",
+      image: "/products/washers/Fender Washer.jpg",
       price: "₹0.40 / Piece",
-      text: "Flat metal washer designed for even load distribution.",
+      text: "Fender Washer",
     },
     {
-      image: "/images/products/washers/washer3.jpg",
+      image: "/products/washers/Flat Washer.jpg",
       price: "₹0.35 / Piece",
-      text: "Durable washer used in machinery and engineering assemblies.",
+      text: "Flat Washers.",
     },
     {
-      image: "/images/products/washers/washer4.jpg",
+      image: "/products/washers/Sealing Washer.jpg",
       price: "₹0.45 / Piece",
-      text: "Corrosion-resistant washer suitable for outdoor installations.",
+      text: "Sealing Washer",
     },
     {
-      image: "/images/products/washers/washer5.jpg",
+      image: "/products/washers/Spring Washer.jpg",
       price: "₹0.50 / Piece",
-      text: "Heavy-duty washer for industrial fastening applications.",
+      text: "Spring Washers",
     },
     {
-      image: "/images/products/washers/washer6.jpg",
+      image: "/products/washers/Square Washer.jpg",
       price: "₹0.42 / Piece",
-      text: "Precision washer used in structural assemblies.",
+      text: "Square Washer",
     },
     {
-      image: "/images/products/washers/washer7.jpg",
+      image: "/products/washers/Tooth Lock Washer.jpg",
       price: "₹0.38 / Piece",
-      text: "High-quality washer ensuring secure bolt connections.",
-    },
-    {
-      image: "/images/products/washers/washer8.jpg",
-      price: "₹0.47 / Piece",
-      text: "Industrial metal washer offering strong support and protection.",
-    },
-    {
-      image: "/images/products/washers/washer1.jpg",
-      price: "₹0.36 / Piece",
-      text: "Standard metal washer for multiple fastening uses.",
+      text: "Tooth Lock Washer",
     },
   ],
 };
