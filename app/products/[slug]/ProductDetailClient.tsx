@@ -47,7 +47,7 @@ export default function ProductDetailClient({ product }: any) {
             alt={product.heading}
             sx={{
               width: "100%",
-              height: "420px",
+              height: "80%",
               objectFit: "cover",
               borderRadius: "12px",
               border: "2px solid #FFFFFF",

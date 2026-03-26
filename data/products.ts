@@ -62,24 +62,24 @@ export const products = [
     description:
       "HT Spring Dowel Pin, Internal Dowel Pin, and Precision Spring Dowel Pins.",
   },
-  {
-    slug: "metal-circlips",
-    image: "/HomePageImages/Products/Metal Circlips.png",
-    heading: "Metal Circlips",
-    description:
-      "HT External Circlips and HT Internal Circlips used in mechanical assemblies.",
-  },
+  // {
+  //   slug: "metal-circlips",
+  //   image: "/HomePageImages/Products/Metal Circlips.png",
+  //   heading: "Metal Circlips",
+  //   description:
+  //     "HT External Circlips and HT Internal Circlips used in mechanical assemblies.",
+  // },
 
-  {
-    slug: "flange-Nut",
-    image: "/HomePageImages/Products/Flange Nut.png",
-    heading: "Flange Nut",
-    description: "",
-  },
-  {
-    slug: "allen-Key",
-    image: "/HomePageImages/Products/Allen Key.png",
-    heading: "Allen Key",
-    description: "Allen key Allen Button Head",
-  },
+  // {
+  //   slug: "flange-Nut",
+  //   image: "/HomePageImages/Products/Flange Nut.png",
+  //   heading: "Flange Nut",
+  //   description: "",
+  // },
+  // {
+  //   slug: "allen-Key",
+  //   image: "/HomePageImages/Products/Allen Key.png",
+  //   heading: "Allen Key",
+  //   description: "Allen key Allen Button Head",
+  // },
 ];

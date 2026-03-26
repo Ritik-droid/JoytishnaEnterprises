@@ -3,58 +3,45 @@ const product = {
   snallInfo: "Different angles and images of Dowel Pins",
 
   images: [
-    "/images/products/pins/pin1.jpg",
-    "/images/products/pins/pin2.jpg",
-    "/images/products/pins/pin3.jpg",
-    "/images/products/pins/pin4.jpg",
-    "/images/products/pins/pin5.jpg",
-    "/images/products/pins/pin6.jpg",
-    "/images/products/pins/pin7.jpg",
-    "/images/products/pins/pin8.jpg",
+    "/products/dowel-pins/Front Image.png",
+    "/products/dowel-pins/Image 1.png",
+    "/products/dowel-pins/Image 2.png",
+    "/products/dowel-pins/Image 3.jpeg",
+    "/products/dowel-pins/Image 4.png",
   ],
 
   info: "Dowel pins are precision cylindrical fasteners used for accurate alignment and positioning of machine components. Manufactured using high-quality steel, these pins ensure excellent dimensional accuracy, durability, and secure fitting. They are widely used in engineering assemblies, automotive components, industrial machinery, and mechanical equipment where precise alignment is essential.",
 
   relatedProducts: [
     {
-      image: "/images/products/pins/pin2.jpg",
+      image: "/products/dowelpins/RelatedProducts/Straight Dowel Pin.png",
       price: "₹0.60 / Piece",
-      text: "Precision dowel pin used for accurate machine alignment.",
+      text: "Straight Dowel Pin.",
     },
     {
-      image: "/images/products/pins/pin3.jpg",
-      price: "₹0.75 / Piece",
-      text: "High-quality dowel pin designed for engineering assemblies.",
+      image: "/products/dowelpins/RelatedProducts/Taper Dowel Pin.png",
+      price: "₹0.60 / Piece",
+      text: "Taper Dowel Pin",
+    },
+     {
+      image: "/products/dowelpins/RelatedProducts/Pull Dowel Pin.png",
+      price: "₹0.60 / Piece",
+      text: "Pull Dowel Pin.",
     },
     {
-      image: "/images/products/pins/pin4.jpg",
-      price: "₹0.70 / Piece",
-      text: "Durable dowel pin suitable for industrial machinery.",
+      image: "/products/dowelpins/RelatedProducts/Slotted Spring Pin.png",
+      price: "₹0.60 / Piece",
+      text: "Slotted Spring Pin",
     },
     {
-      image: "/images/products/pins/pin5.jpg",
-      price: "₹0.80 / Piece",
-      text: "Heavy-duty dowel pin used in automotive components.",
+      image: "/products/dowelpins/RelatedProducts/Spiral Spring Pin.png",
+      price: "₹0.60 / Piece",
+      text: "Spiral Spring Pin",
     },
     {
-      image: "/images/products/pins/pin6.jpg",
-      price: "₹0.65 / Piece",
-      text: "Corrosion-resistant pin designed for long-term use.",
-    },
-    {
-      image: "/images/products/pins/pin7.jpg",
+      image: "/products/dowelpins/RelatedProducts/Tapped Dowel Pin.png",
       price: "₹0.85 / Piece",
-      text: "Precision engineered dowel pin for secure positioning.",
-    },
-    {
-      image: "/images/products/pins/pin8.jpg",
-      price: "₹0.90 / Piece",
-      text: "Industrial dowel pin offering strong mechanical support.",
-    },
-    {
-      image: "/images/products/pins/pin1.jpg",
-      price: "₹0.68 / Piece",
-      text: "Standard dowel pin suitable for multiple fastening applications.",
+      text: "Tapped Dowel Pin",
     },
   ],
 };
