@@ -264,12 +264,33 @@ export default function AboutUS() {
                 flex: { xs: "100%", sm: "48%", md: "30%" },
                 p: 4,
                 borderRadius: "16px",
+                position: "relative",
                 background: "#121212",
-                border: "1px solid #1F1F1F",
+                border: "1px solid transparent", // changed
+                overflow: "hidden",
                 transition: "0.3s",
+
+                // 🌈 Same gradient border
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  inset: 0,
+                  borderRadius: "16px",
+                  padding: "1px",
+                  background:
+                    "linear-gradient(120deg, #00f5ff, #ff00c8, #00f5ff)",
+                  WebkitMask:
+                    "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude",
+                  opacity: 0.6,
+                },
+
                 "&:hover": {
                   transform: "translateY(-5px)",
-                  borderColor: "#333",
+                  "&::before": {
+                    opacity: 1,
+                  },
                 },
               }}
             >
