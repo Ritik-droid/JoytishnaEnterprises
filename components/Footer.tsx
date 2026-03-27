@@ -17,15 +17,15 @@ const Footer = () => {
     },
     {
       icon: Twitter,
-      url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
+      url: "https://www.instagram.com/yourpage",
     },
     {
       icon: InstagramIcon,
-      url: "https://www.instagram.com/biotechsolution22?utm_source=qr&igsh=dDBvNDdmcjBvam11",
+      url: "https://www.instagram.com/",
     },
     {
       icon: YouTube,
-      url: "https://youtube.com/@biotechsolution-f4g?si=DB_35x0g4tv14qbZ",
+      url: "https://youtube.com/",
     },
   ];
   return (

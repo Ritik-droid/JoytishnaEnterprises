@@ -3,11 +3,11 @@ const product = {
   snallInfo: "Different angles and images of Dowel Pins",
 
   images: [
-    "/products/dowel-pins/Front Image.png",
-    "/products/dowel-pins/Image 1.png",
-    "/products/dowel-pins/Image 2.png",
-    "/products/dowel-pins/Image 3.jpeg",
-    "/products/dowel-pins/Image 4.png",
+    "/products/dowelpins/Front Image.png",
+    "/products/dowelpins/Image 1.png",
+    "/products/dowelpins/Image 2.png",
+    "/products/dowelpins/Image 3.jpeg",
+    "/products/dowelpins/Image 4.png",
   ],
 
   info: "Dowel pins are precision cylindrical fasteners used for accurate alignment and positioning of machine components. Manufactured using high-quality steel, these pins ensure excellent dimensional accuracy, durability, and secure fitting. They are widely used in engineering assemblies, automotive components, industrial machinery, and mechanical equipment where precise alignment is essential.",

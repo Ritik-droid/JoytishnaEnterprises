@@ -93,8 +93,34 @@ export default function AboutUS() {
             flex: { xs: "100%", md: "48%" },
             p: 5,
             borderRadius: "20px",
+            position: "relative",
             background: "linear-gradient(145deg, #111, #1A1A1A)",
-            border: "1px solid #1F1F1F",
+            border: "1px solid rgba(255,255,255,0.05)",
+            boxShadow: "0 8px 25px rgba(0,0,0,0.6)",
+            transition: "all 0.3s ease",
+
+            // Gradient glow border effect
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              inset: 0,
+              borderRadius: "20px",
+              padding: "1px",
+              background: "linear-gradient(120deg, #00f5ff, #ff00c8, #00f5ff)",
+              WebkitMask:
+                "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude",
+              opacity: 0.6,
+            },
+
+            "&:hover": {
+              transform: "translateY(-6px) scale(1.01)",
+              boxShadow: "0 15px 40px rgba(0,0,0,0.8)",
+              "&::before": {
+                opacity: 1,
+              },
+            },
           }}
         >
           <Typography
@@ -126,8 +152,34 @@ export default function AboutUS() {
             flex: { xs: "100%", md: "48%" },
             p: 5,
             borderRadius: "20px",
+            position: "relative",
             background: "linear-gradient(145deg, #111, #1A1A1A)",
-            border: "1px solid #1F1F1F",
+            border: "1px solid rgba(255,255,255,0.05)",
+            boxShadow: "0 8px 25px rgba(0,0,0,0.6)",
+            transition: "all 0.3s ease",
+
+            // Gradient glow border effect
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              inset: 0,
+              borderRadius: "20px",
+              padding: "1px",
+              background: "linear-gradient(120deg, #00f5ff, #ff00c8, #00f5ff)",
+              WebkitMask:
+                "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude",
+              opacity: 0.6,
+            },
+
+            "&:hover": {
+              transform: "translateY(-6px) scale(1.01)",
+              boxShadow: "0 15px 40px rgba(0,0,0,0.8)",
+              "&::before": {
+                opacity: 1,
+              },
+            },
           }}
         >
           <Typography

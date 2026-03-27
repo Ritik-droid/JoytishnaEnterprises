@@ -1,5 +1,5 @@
 const product = {
-  heading: "Industrial Bolts",
+  heading: "Industrial Sprockets",
   snallInfo: "Different angles and image of Industrial Bolts",
 
   images: [
@@ -10,7 +10,7 @@ const product = {
     "/products/sp-rockets/Sprocket 4.png",
   ],
 
-  info: "Our range of industrial bolts is engineered for strength, durability, and precision. These bolts are widely used in heavy machinery, construction structures, manufacturing equipment, and engineering assemblies.",
+  info: "Our range of industrial sprockets is engineered for strength, durability, and precision. These sprockets are widely used in heavy machinery, construction structures, manufacturing equipment, and engineering assemblies.",
 
   relatedProducts: [
     {
