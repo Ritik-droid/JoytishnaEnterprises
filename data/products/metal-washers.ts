@@ -40,7 +40,7 @@ const product = {
       text: "Square Washer",
     },
     {
-      image: "/products/washers/RelatedProducts/Tooth Lock Washer.png",
+      image: "/products/washers/RelatedProducts/Tooth lock Washer.png",
       price: "₹0.38 / Piece",
       text: "Tooth Lock Washer",
     },
