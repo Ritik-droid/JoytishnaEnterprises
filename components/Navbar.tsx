@@ -18,7 +18,7 @@ const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Products", href: "/products" },
   { label: "Contact US", href: "#contact" },
-  { label: "Download Catalogue", href: "#contact" },
+  { label: "Download Catalogue", href: "/catalog.pdf" },
 ];
 
 export default function Navbar() {
@@ -62,8 +62,6 @@ export default function Navbar() {
             py: { xs: 0, md: 2 },
           }}
         >
-
-          
           <Image
             src="/logo2.png"
             alt="jyotishnaLogo"
@@ -77,8 +75,29 @@ export default function Navbar() {
             <Box
               sx={{ display: "flex", gap: 3, fontFamily: "var(--font-jost)" }}
             >
-              {navLinks.map((link) => {
-                return (
+              {navLinks.map((link) =>
+                link.label === "Download Catalogue" ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Box
+                      sx={{
+                        px: 2,
+                        py: 1,
+                        transition: "0.3s",
+                        "&:hover": {
+                          opacity: 0.85,
+                        },
+                      }}
+                    >
+                      {link.label}
+                    </Box>
+                  </a>
+                ) : (
                   <Link
                     key={link.label}
                     href={link.href}
@@ -98,8 +117,8 @@ export default function Navbar() {
                       {link.label}
                     </Box>
                   </Link>
-                );
-              })}
+                ),
+              )}
             </Box>
           )}
 
