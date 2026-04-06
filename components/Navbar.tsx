@@ -18,7 +18,7 @@ const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Products", href: "/products" },
   { label: "Contact US", href: "#contact" },
-  { label: "Download Catalogue", href: "/catalog.pdf" },
+  { label: "Download Catalogue", href: "/Catalog.pdf" },
 ];
 
 export default function Navbar() {
