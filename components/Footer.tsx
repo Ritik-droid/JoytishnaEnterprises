@@ -286,7 +286,7 @@ const Footer = () => {
             fontFamily: "var(--font-jost)",
           }}
         >
-          Prathmesh & Ritik- iritik358@gmail.com [+917397827579]
+          Prathmesh & Ritik- iritik358@gmail.com[+917397827579]
         </Typography>
       </Box>
     </Box>
